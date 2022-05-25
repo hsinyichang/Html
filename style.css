@@ -1,0 +1,7 @@
+ul{
+    font-weight: bolder;
+    color:blue;
+    list-style-type:decimal-leading-zero;
+    text-shadow: 2px 2px 2px yellow;
+    border: 3px solid orange;
+}

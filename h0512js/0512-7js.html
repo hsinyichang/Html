@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript練習四</title>
+</head>
+
+<body>
+    <script>
+        // 輸入存錢數量
+        // 買東西的錢多少
+        // 如果不夠 無法付款
+        // 最後顯示存款剩多少
+
+        let money = parseInt(prompt('輸入存錢金額', '0'));
+        let buy = parseInt(prompt('東西金額', '0'));
+
+        if (money > buy) {
+            console.log('存款金額為', money, '購買金額為', buy);
+            result = money - buy; //存款金額大才執行這兩行程式
+            money = result;
+        } else { //存款金額太少就不用執行，直接顯示出存款不足，就會顯示出原本存款餘額
+            console.log('存款不夠無法付款');
+
+        }
+
+        console.log('存款餘額為', money);
+    </script>
+</body>
+
+</html>

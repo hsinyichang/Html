@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getmoneyfun() {
+            let money = parseInt(prompt('領錢金額', '0'));
+            if (save >= money) {
+                console.log('存款金額為', save);
+                console.log("我要領錢");
+                console.log('領錢金額為', money);
+                mystring = "領錢金額=> " + money + "元\n";
+                save = save - money;
+                console.log('存款餘額為', save);
+                // alert('存款金額為 '+save +'\n領了 '+money+'\n存款剩餘 '+result);
+
+            } else {
+                console.log('存款餘額不足領取');
+                console.log('存款餘額為', save);
+                mystring = "存款餘額不足領取\n";
+
+            }
+        }
+
+        function transfermoney() {
+
+            let account = parseInt(prompt('輸入轉帳帳號', '0'));
+
+            let accountmoney = parseInt(prompt('輸入轉帳金額', '0'));
+            if (save >= accountmoney) {
+                let who = prompt('轉給誰', '人名');
+                console.log('存款金額為', save);
+                console.log("我要轉帳");
+                console.log('轉帳金額為', accountmoney);
+                console.log('轉帳帳號為', account);
+                console.log('轉帳給', who);
+                save = save - accountmoney;
+                console.log('存款餘額為', save);
+
+            } else {
+                console.log('存款餘額不足領取');
+                console.log('存款餘額為', save);
+            }
+
+        }
+
+        function savemoney() {
+            let savemoney = parseInt(prompt('輸入存款金額', 0));
+            if (savemoney >= 0) { //輸入的存款金額要大於0
+                console.log("成功存錢");
+                save = save + savemoney;
+            } else {
+                console.log("金額錯誤");
+            }
+            console.log("總共存款為 " + save);
+        }
+        /*--------------------------上面是function-------------------------------*/
+
+        let mystring = ""; /*這裡我要顯示最後的結果，先統一宣告一個變數為空字串*/
+
+        let save = parseInt(prompt('輸入存款金額', '0'));
+        let action = parseInt(prompt('領錢為1、轉帳為2、存錢為3', '1or2or3'));
+        mystring = "動作為 " + action + "\n"; /*要加的字串存回mystring變數，最後alert的地方呼叫(但要注意:若要顯示多個變數就要設其他名字再宣告)*/
+
+        switch (action) {
+            case 1:
+
+                getmoneyfun(); //直接呼叫function，把上面的程式寫上去
+                break;
+
+            case 2:
+
+                transfermoney()
+                break;
+            case 3:
+
+                savemoney();
+                break;
+
+            default:
+                break;
+        }
+
+
+        mystring = mystring + '最終存款=>' + save + "元\n"; /*跳脫字元\n*/
+        // 上面所宣告的mystring都會在這裡呼叫
+
+        alert(mystring);
+    </script>
+</body>
+
+</html>

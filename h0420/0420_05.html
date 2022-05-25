@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            
+        }
+        .row{
+            display: flex;/*可以解決排版問題*/
+            flex-wrap: wrap;
+            border: 1px solid black;
+        }
+        .col{
+            /*display: inline-block;(沒有辦法用在網頁排版使用因為會有空格產生)*/
+            border: 1px solid red;
+            width: calc(100%/3);/*這裡把小盒子分割為3個一排*/
+            /*width: 33.33%;*/
+            font-size: 40px;
+            height: 300px;
+            background-color: lightblue;
+            /*margin:10px;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+    <div class="col box1">1</div>
+    <div class="col box2">2</div>
+    <div class="col box3">3</div>
+    <div class="col box4">4</div>
+    <div class="col box5">5</div>
+    <div class="col box6">6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            width: 300px;
+            height: 200px;
+            background-color: cornflowerblue;
+        }
+        a{   /*這裡的標籤，滑鼠移到區塊內都可以點*/
+            display: block;/*改變為區塊模式，因a標籤原是行內模式*/
+            width: 300px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        p{
+            display: inline-block;/*改變為可並排且在inline裡的box，原本p是行內模式*/
+            width: 40px;
+            height: 40px;
+            background-color: blueviolet;
+        }
+        h1{
+            display: block;/*變為區塊，原本是行內的標題*/
+            background-color: brown;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        block 區塊
+        inline 行內
+        inline-block 行內區塊
+    -->
+    <div>
+        Lorem ipsum dolor sit amet , dicta fugiat veniam eum placeat? Error earum cum commodi nihil culpa ea, voluptates modi quia eos ducimus natus cumque.<br>
+        <p>123</p>
+        <p>456</p>
+    </div><br>
+
+    <a href="">a</a></a>
+
+    <h1>變為區塊</h1>
+</body>
+</html>

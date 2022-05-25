@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排版</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #665544;
+            text-align: center;
+        }
+
+        body {
+            width: 960px;
+            margin: 0 auto;
+            background-color: rgb(217, 248, 248);
+        }
+
+        .content {
+            height: 100%;
+            overflow: auto;
+        }
+
+        
+        .feature,
+        .footer {
+            background-color: beige;
+            margin: 10px;
+            padding: 10px;
+            height: 15vh;
+
+        }
+        .nav{
+            background-color: beige;
+            margin: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .col1,
+        .col2,
+        .col3 {
+            background-color: antiquewhite;
+            width: 300px;
+            float: left;
+            margin: 10px;
+            height: 25vh;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        li{
+            list-style: none;
+        }
+
+        .content::after {
+            /*因為裡面的col1-3有做float，所以後面的footer要加上這個，避免跑版*/
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Logo</h1>
+        <div class="nav">
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">product</a></li>
+                <li><a href="">service</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="feature">
+                <p>Frature</p>
+            </div>
+            <div class="article col1">col1</div>
+            <div class="article col2">col2</div>
+            <div class="article col3">col3</div>
+        </div>
+
+        <div class="footer">
+            Copyright 2022
+
+        </div>
+    </div>
+</body>
+
+</html>

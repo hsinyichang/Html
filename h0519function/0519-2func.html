@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color:red;
+        }
+
+        .myClass{
+            color: red;
+        }
+        .blueClass {
+            color: blue;
+        }
+
+        .queryClass {
+            color:yellow;
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    <!-- <div id="test">
+
+    </div> -->
+
+    <!-- <div class="myClass">
+        Hello myClass1
+    </div>
+    <div class="myClass">
+        Hello myClass2
+    </div>
+    <div id="query">
+        query id test
+    </div> -->
+
+    <input type="text" name="num1" id="num1" placeholder="num1 ?" required>
+
+    <span> + </span>
+
+    <input type="text" name="num2" id="num2" placeholder="num2 ?" required>
+    
+    <!-- <div class="queryClass">
+        query id test
+    </div>
+    <div class="queryClass">
+        query id test
+    </div> -->
+    <br><br>
+    <!-- <button id="myBtn"> button</button> -->
+
+    <button type="button" class="btn btn-primary" id="myBtn">bs btn</button>
+    <br><br>
+    <div id="result">
+        結果
+    </div>
+
+
+    <script>
+    //練習五
+    //num1+num2=result
+    
+    
+    
+    
+    //練習四
+    //input num1
+    //input num2
+    const myBtn = document.getElementById('myBtn');
+        const result = document.getElementById('result');
+
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+
+        const queryAllClass = document.querySelectorAll('.queryClass');//選擇所有的class作執行
+        
+        // 元件.觸發事件('click點擊事件',動作要做啥.)
+        myBtn.addEventListener('click',function(){
+                // alert('myBtn ok')    ;
+            // for (const key in queryAllClass) {
+            //     queryAllClass[key].style.color = "red";
+            // }
+
+            let num1 = parseInt(num1Input.value);
+            let num2 = parseInt(num2Input.value);
+            console.log(num1 + num2);
+            sum = num1 + num2;
+            result.innerText = `結果為 ${sum}`;
+        });
+
+
+
+    //練習三 button touch queryButton red
+    // const myBtn=document.getElementById("myBtn");
+    // const result=document.getElementById("result");
+    // const queryAllClass=document.querySelectorAll('.queryClass');
+    // myBtn.addEventListener('click',function(){//元件觸發(click)時會要做的動作
+    //     result.innerText="good";//點擊時result的文字會變成good
+        
+    //     for (const key in queryAllClass) {//使全部class轉換顏色
+    //             queryAllClass[key].style.color = "red";
+    //        }
+    //     // alert("myBtn ok");
+    // });
+
+
+
+
+    //練習二 class myclass color red => blue
+        // const myClass = document.getElementsByClassName('myClass');
+        // console.log(myClass[0].innerText);
+        // myClass[1].style.color = "blue";
+        
+        // const query = document.querySelector("#query");
+        // query.style.color = "green";
+
+        
+        
+        // const queryAllClass = document.querySelectorAll('.queryClass');
+        // 全部class更換
+        // 1.for
+            // for (let i = 0; i < queryAllClass.length; i++) {
+            //     queryAllClass[i].style.color = "blue";
+            // }
+
+        // 2.for in
+        //php 的foreach
+        //    for (const key in queryAllClass) {
+        //         queryAllClass[key].style.color = "blue";
+        //    }
+
+
+
+
+        // getElementById 抓單個id
+        // getElementsByClassName 全部的class
+        // querySelector 抓單個id 要#id
+        // querySelectorAll 抓class 要.class
+    
+
+
+        // const testDiv = document.getElementById('test'); //括弧裡面要記得加''單/雙引號
+        // testDiv.innerText = "add test txt"; //要在上面的div區塊內寫入文字
+        // testDiv.innerHTML = "<h1>hello</h1>";
+
+
+        
+
+
+
+        // let student1='amy';
+        // let student2='bob';
+        // let student3='cat';
+
+
+
+
+        let x = 10; //宣告變數
+
+        const y = 20; //宣告常數  值不可變  唯讀
+
+        x = 300;
+
+        var z = 100;
+
+        //x、z都可以再改變為其他值，就y只能為20
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*  CSS combinators 組合選擇器  */
+        /*   *星號是選取所有選擇器的功能，套用所有元件    例如以下要套用所有的邊框
+          *{
+                box-sizing: border-box;
+                border: 1px solid black;
+            }
+        */
+        .test+p{
+            color: red;
+        }/**/
+
+
+    </style>
+</head>
+<body>
+    <!-- 【test > p】  是選取test'內'第一層所有的p ，第二層的就沒有-->
+    <!-- 【test ~ p】  是選取test兄弟層的所有p-->
+    <!-- 【test + p】  是選取test元素後的第一個p-->    
+    <!-- 【test   p】  是選取test內所有的p【test空白p】-->
+    <!-- 【test , p】  是選取test全部和p全部-->
+    
+    
+    <div class="test">
+        <p>123</p>
+            <ul>
+                <li>
+                    <p>55</p>
+                </li>
+                <li>
+                    <p>55</p>
+                </li>
+            </ul>
+        <p>123</p>
+        <p>123</p>
+        <p>123</p>
+    </div>
+
+    <p>666</p>
+    <p>777</p>
+    <p>888</p>
+</body>
+</html>

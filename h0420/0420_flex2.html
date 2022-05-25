@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+        }
+        .flex-container{
+            display: flex;
+            justify-content: space-around;/*全部對齊主軸方式*/
+            /*alight-item:flex-star;(對齊次主軸)
+            alight-item:flex-end;
+            alight-item:center;
+            alight-item:stretch;
+            alight-item:space-between
+            alight-content:flex-star;(多組次軸對齊);
+            item是僅於項目，
+            
+            */
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: lightgreen;
+            border: 1px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+
+        <div class="box box1">1
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora optio id ratione deleniti nostrum ex quidem asperiores modi. Vel minus perferendis quidem cumque assumenda maxime placeat ea earum labore neque?</p>
+        </div>
+            <div class="box box2">2
+        
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis omnis dignissimos libero, commodi iusto veniam voluptatum laborum a quasi deleniti aspernatur recusandae est asperiores cupiditate hic nesciunt quidem repudiandae. A.</p>
+        </div>
+            <div class="box box3">3
+          
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, cupiditate? Necessitatibus vitae nostrum laboriosam rem modi vel ratione ut nam? Officiis cupiditate voluptas quisquam tempora a ea aperiam excepturi magni!</p>
+        </div>
+</div>
+</body>
+</html>

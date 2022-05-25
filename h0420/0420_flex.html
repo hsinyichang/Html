@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+        }
+        .flex-container {/*這裡要做藍色的flex box*/
+          display: flex;/*方向是橫的row，這是宣告的*/
+          flex-direction: row;/*(主軸方向)預設值本來就是row，我可以自己改成要直的column*/
+          flex-wrap: wrap;/*網頁寬度有改變的話，裡面的小盒子所有內容會自動換行*/
+          background-color: DodgerBlue;
+          /*flex-basis: ;
+            可以取代對應的width和height(主軸原件item基準)*/
+          /*flex-grow: ;
+            可讓裡面的物件等比放大*/
+         
+        }
+        
+        .flex-container > div {/*【>】第一層所有的div， 3個灰色的小盒子*/
+          background-color: #f1f1f1;
+          /*margin: 10px;
+          padding: 20px;*/
+          font-size: 30px;
+          border: 2px solid black;
+          width: calc(100%/3);
+          height: 400px;
+        }
+        </style>
+</head>
+<body>
+    <h1>Create a Flex Container</h1>
+
+<div class="flex-container"><!--flexbox-->
+  <div>1</div>
+  <div>2</div>
+  <div>3</div> 
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+ 
+</div><!--flexbox-->
+
+<p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+
+<p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+</body>
+</html>

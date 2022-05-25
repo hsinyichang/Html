@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float/clearfix/clear</title>
+    <style>
+        .table{
+            border: 1px solid orange;
+            overflow: auto;/*多出來的部分會顯示在框框裡*/
+        }
+        .table1{
+            border: 1px solid rgb(48, 223, 33);
+            
+        }
+        .float{
+            float: left;
+        
+        }
+        .clear{
+            clear: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>float</h2>
+        <div class="table">
+            <img class="float" src="http://www.silvitablanco.com.ar/sanvalentin/14-feb-valentin/nancy-kubo/NKubo_TotallySweet_Bear.png" alt="" width="250px" height="250px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam id officia pariatur necessitatibus, dicta alias quas ipsum, reiciendis numquam iste est eligendi, dolore error veritatis quod excepturi sequi unde.</p>
+            <!-- 加了float   可讓圖片靠左  然後p 內容在圖片的右邊 -->
+        </div>
+    
+        <div class="table1">
+            <img class="clear" src="http://www.silvitablanco.com.ar/sanvalentin/14-feb-valentin/nancy-kubo/NKubo_TotallySweet_Bear.png" alt="" width="250px" height="250px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam id officia pariatur necessitatibus, dicta alias quas ipsum, reiciendis numquam iste est eligendi, dolore error veritatis quod excepturi sequi unde.</p>
+            <!-- 這裡清除left就是按照原本區塊方式排列 -->
+        </div>
+        
+        <div>
+            
+        </div>
+</body>
+</html>

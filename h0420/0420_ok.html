@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鋼琴網頁</title>
+    <style>
+        body{
+            font-size: 90%;
+            font-family:'Courier New', Courier, monospace;
+            letter-spacing: 0.15em;/*每個字之間的間距*/
+            background-color: #efefef;
+        }
+        #page{
+            max-width: 940px;
+            min-width: 720px;
+            height: 90vh;/*viewport height螢幕可顯示的高度*/
+            margin: 10px auto;/*左右auto為置中*/
+            padding: 20px;
+            border: 4px double #000;
+            background-color: white;
+        }
+        #logo{
+            width: 150px;
+            margin: 10px auto;/*讓logo左右置中*/
+        }
+        ul{
+            width: 570px;
+            padding: 15px;
+            margin: 0px auto;
+            text-align: center;
+            border-top: 2px solid black;/*上面粗的線*/
+            border-bottom: 1px solid black;/*下面細的線*/
+        }
+        li{
+            display: inline;/*讓清單變成行內，橫向*/
+            margin: 0px 5px;/*每個標籤左右5px*/
+            
+        }
+        a{/*取消超連結底線&更改顏色*/
+            text-decoration:none;
+            color: #000;
+            text-transform: uppercase;
+            padding: 6px 5px 5px 5px;
+        }
+        #keys{
+            text-align: center;/*使照片置中*/
+        }
+        p{
+            width: 600px;
+            text-align: justify;/*使文字分散對齊*/
+            font-weight: normal;
+            margin: 20px auto;
+        }
+
+
+    </style>
+</head>
+<!--做出一個網頁-->
+<body>
+    <div id="page">
+        <div id="logo">
+            <img src="logo.gif" alt="logo">
+        </div>
+        <div>               
+            <ul>
+                <li><a href="#">Home</a></li><!--alt+左鍵是多選，在ctr+D選取-->
+                <li><a href="#">for sale</a></li>
+                <li><a href="#">repairs</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <p id="keys">
+                <img src="./keys.jpg" alt="keys">
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, incidunt. Excepturi asperiores maiores voluptas minus esse voluptatibus. Sint reprehenderit dignissimos esse, dolores provident impedit, 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ducimus necessitatibus in commodi vel quas tempore sint. Voluptate corrupti dolores, ratione, unde eos iure inventore quod, nam eligendi temporibus cupiditate.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

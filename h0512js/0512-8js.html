@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript練習五</title>
+</head>
+
+<body>
+    <script>
+        // 1存款多少
+        // 2後續動作-領錢或轉帳或存錢
+
+        // 領錢時
+        // 輸入領錢金額
+        // 判斷是否足夠領取
+        // 可以領的話要領多少 存款餘額為
+        // 不可以領 則餘額不足
+
+        // 轉帳時
+        // 轉帳的帳號
+        // 輸入轉帳金額
+        // 判斷是否足夠轉帳
+        // 轉出多少  轉給誰  存款餘額剩多少
+        // 不可以轉 則餘額不足
+
+        let save = parseInt(prompt('輸入存款金額', '0'));
+        let action = parseInt(prompt('領錢為、轉帳為2、存錢為3', '1or2or3'));
+        switch (action) { //這裡一定要兩個等於
+            case 1:
+                let money = parseInt(prompt('領錢金額', '0'));
+                if (save >= money) {
+                    console.log('存款金額為', save);
+                    console.log("我要領錢");
+                    console.log('領錢金額為', money);
+                    result = save - money;
+                    console.log('存款餘額為', result);
+                    // alert('存款金額為 '+save +'\n領了 '+money+'\n存款剩餘 '+result);
+                } else {
+                    console.log('存款餘額不足領取');
+                    console.log('存款餘額為', result);
+                }
+                break;
+
+            case 2: //這裡用switch case會比較好，因為若存款或轉帳的地方輸入成其他數字都會跳到轉帳功能
+                let account = parseInt(prompt('輸入轉帳帳號', '0'));
+                let accountmoney = parseInt(prompt('輸入轉帳金額', '0'));
+                if (save >= accountmoney) {
+                    let who = prompt('轉給誰', '人名');
+                    console.log('存款金額為', save);
+                    console.log("我要轉帳");
+                    console.log('轉帳金額為', accountmoney);
+                    console.log('轉帳帳號為', account);
+                    console.log('轉帳給', who);
+                    result = save - accountmoney;
+                    console.log('存款餘額為', result);
+
+                } else {
+                    console.log('存款餘額不足領取');
+                    console.log('存款餘額為', result);
+                }
+                break;
+            case 3:
+                let savemoney = parseInt(prompt('輸入存款金額', 0));
+                if (savemoney >= 0) { //輸入的存款金額要大於0
+                    console.log("成功存錢");
+                    result = save + savemoney;
+                } else {
+                    console.log("金額錯誤");
+                }
+                console.log("總共存款為 " + result);
+                break;
+
+            default:
+                break;
+        }
+        alert('存款剩餘為 ' + result);
+    </script>
+</body>
+
+</html>

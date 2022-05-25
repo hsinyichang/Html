@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;/*沒有預設就是content-box，內距會影響設好的框大小*/
+    /*border-box會使設好的長寬不因padding而改變*/
+    color: blue;
+}
+h3{
+    color: rgb(6, 107, 73);
+}
+
+
+.box1{
+border: 2px solid black;/*盒子的外框*/
+width: 400px;/*盒子的總寬*/
+height: 300px;/*盒子的總長*/
+background-color: bisque;
+margin: 10px;/*盒子外距*/
+padding: 30px;/*盒子內距*/
+}
+.box2{
+    border: 2px solid black;/*盒子的外框*/
+    width: 400px;/*盒子的總寬*/
+    height: 300px;/*盒子的總長*/
+    background-color: bisque;
+    margin: 20px 10px;/*盒子外距(上下)&(左右)*/
+    padding: 30px;/*盒子內距*/
+    }

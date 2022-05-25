@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sryinge-box{
+            width:600px;
+            height:100px;
+            margin: auto;
+            position:relative;
+        }
+        .sryinge-box::before{
+            content:'';
+            width: 80%;
+            height:70%;
+            position:absolute;
+            top:50%;
+            left: 7%;
+            transform: translate(0,-50%);
+            background:linear-gradient(rgba(255,255,255,0),rgba(124, 122, 122, 0.3),rgba(255,255,255,0)),#f8f8f8;
+            border-radius: 0 8px 8px 0;
+            border:1px solid #aaa;
+        }
+        .sryinge-box::after{
+            content:'';
+            width: 7%;
+            height:100%;
+            position:absolute;
+            top: 0;
+            left: 0;
+            background:linear-gradient(rgba(255,255,255,0),rgba(124, 122, 122, 0.3),rgba(255,255,255,0)),#f8f8f8;
+            border-radius: 5%;
+            border:1px solid #aaa;
+        }
+        .sryinge{
+            width:65%;
+            height: 100%;
+            background:
+            linear-gradient(rgba(255,255,255,0),rgba(124, 122, 122, 0.3),rgba(255,255,255,0)),
+            linear-gradient(90deg,#f8f8f8 45%,black 45% 55%,#fafaa7 55%);
+            border:1px #aaa solid;
+            position:absolute;
+            left: 15%;
+
+        }
+        .needle{
+            border:1px solid black;
+            width: 40%;
+            position:absolute;
+            top:50%;
+            right:0;
+            transform:translate(0,-50%);
+            z-index:-1;
+        }
+        pre{
+            margin:0;
+            padding:0px;
+        }
+        .MIT{
+            position:absolute;
+            bottom: 0;
+            left: 5px;
+            color:#b0b4b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="sryinge-box">
+        <div class="sryinge">
+            <pre>  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |</pre>
+            <span class="MIT">Made in Taiwan</span>
+        </div>
+        <div class="needle"></div>
+    </div>
+</body>
+</html> 
