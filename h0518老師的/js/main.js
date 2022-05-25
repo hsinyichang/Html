@@ -85,7 +85,7 @@ myForm.addEventListener('submit', function(e){
 //2.改元件 內容文字
 
 
-resultP.innerText = "hello first change text";
+// resultP.innerText = "hello first change text";
 
 // console.log(window);
 

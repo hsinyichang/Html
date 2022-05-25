@@ -13,14 +13,28 @@
 * 做一個簡易網頁
 ##
 ## 0504  
-* 介紹RWD響應是網頁  @media()
+* 介紹RWD響應式網頁  @media()
 ##
 ## 0505  
-* float   clear float
+* float、clear float
 ##
 ## 0511  
-* clear:both    clearfix::after
+* clear:both 、 clearfix::after
 ##
 ## 0512  
 * javascript
+* 網頁排版
+* js  基礎語法  (console.log、prompt)
+* 存提款練習
 ##
+## 0518
+* 介紹function()
+* num1  oprion  num2  運算  resultP.innerText =myString1;
+* 存提款使用function()
+* 有無跳脫字元
+* console.log(`hello ${name} 午安`);
+* helloString = `hello ${name} 午安`;
+##
+## 0519
+* func select(選擇器)+-*/運算
+* fun
