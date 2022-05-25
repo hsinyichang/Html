@@ -34,7 +34,9 @@
 * 有無跳脫字元
 * console.log(`hello ${name} 午安`);
 * helloString = `hello ${name} 午安`;
+* 有$變數時要加` `
 ##
 ## 0519
 * func select(選擇器)+-*/運算
-* fun
+* func   .addEventListener 監聽事件(觸發時要執行什麼事件)
+* 點餐系統練習
