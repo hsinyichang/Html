@@ -7,8 +7,8 @@ const item2Num = document.getElementById('item2Num');
 const item2Price = document.getElementById('item2Price');
 
 const item3 = document.getElementById('item3');
-const item3um = document.getElementById('item3Num');
-const item3rice = document.getElementById('item3Price');
+const item3Num = document.getElementById('item3Num');
+const item3Price = document.getElementById('item3Price');
 // button 1.click / button submit ->form
 const myForm = document.getElementById('myForm');
 // const myBtn = document.getElementById('myBtn');
