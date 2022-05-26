@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case 練習</title>
+</head>
+<body>
+    <script>
+        let number=5;
+        switch(number){
+            case 1:
+                console.log('星期一買樂透');
+                break;
+            case 2:
+                console.log('星期二買樂透');
+                break;
+            case 3:
+                console.log('星期三買樂透');
+                break;
+            case 4:
+                console.log('星期四買樂透');
+                break;
+            case 5:
+                console.log('星期五買樂透');
+                break;
+            case 6:
+                console.log('星期六買樂透');
+                break;
+            case 7:
+                console.log('星期日買樂透');
+                break;
+        }
+    </script>
+    <script>
+        let lottoday=1;
+        
+        switch(lottoday){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+                console.log('奇數星期都可以去');
+                break;
+
+            case 2:
+            case 4:
+            case 6:
+                console.log("偶數星期都可以去")
+                break;
+
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>
