@@ -46,8 +46,9 @@
 * 跳脫字元、99乘法表 p class
 * 日期 Date
 ## 0526
-* 【套件】使用sweetalert2(從cdnjs網站找到 limonte-sweetalert2 然後複製link)
+* 【套件】使用sweetalert2(從cdnjs網站找到limonte-sweetalert2 然後複製link)
 * if else  練習
 * 是否中樂透 金額 練習
 * 會員身分  身分證字號 打折 練習
 * 三元運算子練習
+* Switch case 練習
