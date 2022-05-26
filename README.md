@@ -7,7 +7,7 @@
 * 表單輸入、表格、區塊(block inline-block inline)
 ##
 ## 0420
-* 使用icon(從cdnjs網站找到 font-awsome 然後複製link)
+* 【套件】使用icon(從cdnjs網站找到 font-awsome 然後複製link)
 * id 設為書籤、box背景圖片、box-sizing: border-box
 * flex 排版問題  flex wrap  justify-content
 * 做一個簡易網頁
@@ -40,3 +40,8 @@
 * func select(選擇器)+-*/運算
 * func   .addEventListener 監聽事件(觸發時要執行什麼事件)
 * 點餐系統練習
+## 0525
+
+
+## 0526
+* 【套件】使用sweetalert2(從cdnjs網站找到 limonte-sweetalert2 然後複製link)
