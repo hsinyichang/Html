@@ -45,3 +45,4 @@
 
 ## 0526
 * 【套件】使用sweetalert2(從cdnjs網站找到 limonte-sweetalert2 然後複製link)
+* if else  練習
