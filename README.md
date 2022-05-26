@@ -41,8 +41,10 @@
 * func   .addEventListener 監聽事件(觸發時要執行什麼事件)
 * 點餐系統練習
 ## 0525
-
-
+* 講解BOM、let、const、var、confirm、字串變數...
+* 介紹flag
+* 跳脫字元、99乘法表 p class
+* 日期 Date
 ## 0526
 * 【套件】使用sweetalert2(從cdnjs網站找到 limonte-sweetalert2 然後複製link)
 * if else  練習
