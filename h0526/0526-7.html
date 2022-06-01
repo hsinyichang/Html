@@ -11,12 +11,29 @@
         // 作業20220526 switch case
         // 發號牌的動作 總共發90個
         // 取餘數
+        // 以下為尾數↓
         // 早上圖書館讀書 1 4 7
         // 下午圖書館讀書 2 5 8
         // 晚上圖書館讀書 3 6 9
 
-        let number=28;
-        let num=number%
+        let number=27;
+        console.log('number=>',number);
+        switch(number % 3) {
+            case 1:
+                //餘數1
+                console.log("早上讀書");
+                break;
+            case 2:
+                //餘數2
+                console.log("下午讀書");
+                break;
+            case 0:
+                //餘數0
+                console.log("晚上讀書");
+                break;
+            default:
+                break;
+        }
 
    </script>
 </body>
