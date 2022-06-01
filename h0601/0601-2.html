@@ -23,18 +23,30 @@
         // 從1開始
         // 10結束
         //一次加1
-        let sum=0;
+
+
+        // let sum=0;
+        // for(let i=1;i<=10;i++){
+        //     console.log('i=>',i);
+        //     console.log('sum=sum+i;=>',sum+'=',sum,'+',i);
+        //     sum=sum+i;
+        //     //第一次  0+1=1
+        //     //第二次  1+2=3
+        //     //第三次  3+3=6
+        //     //以此類推..加總前一次的和
+        //     console.log('sum=',sum);
+        // }
+        
+        //方法二
+        let sum =0;
         for(let i=1;i<=10;i++){
-            console.log('i=>',i);
-            console.log('sum=sum+i;=>',sum+'=',sum,'+',i);
+            console.log('i=>'+i);
+            console.log('sum=>',sum);
+            console.log(`${sum}+${i}`);
             sum=sum+i;
-            //第一次  0+1=1
-            //第二次  1+2=3
-            //第三次  3+3=6
-            //以此類推..加總前一次的和
-            console.log('sum=',sum);
+            console.log(`result sum=>${sum}`);
         }
-    
+        console.log(`result sum=>${sum}`);
 
 
     </script>
