@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+// 畫星星 練習
+// 輸入一個數  會顯示如下圖
+// input=5 時
+// *
+// **
+// ***
+// ****
+// *****
+
+let x =parseInt(prompt('輸入要列印的*數',0));
+let sum='';
+for(let i=1;i<=x;i++){
+    sum=sum+'*';
+    // console.log(sum);//放內層就是每層顯示
+    document.write(sum+'<br>');//直接顯示於畫面上(測試用)
+}
+//console.log(sum);  放外層只顯示最後一行的結果  所以等於輸入5   就列印出5顆
+
+</script>
+
+</body>
+</html>
