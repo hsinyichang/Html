@@ -59,3 +59,4 @@
 * 九九乘法表練習
 * 字串轉型  補0  padStart()
 * php  的方法是 str_pad()
+* p class 換顏色
