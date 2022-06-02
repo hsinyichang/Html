@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 99乘法表</title>
+    <style>
+        table,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+
+        //練習
+        //作成table
+
+        console.log('for 99');
+        document.write('<table>')
+        for(let i=1;i<=9;i++){
+            document.write('<tr>')
+            for(let j=1;j<=9;j++){
+                document.write('<td>')
+                let sum=i*j;
+                console.log(i+'*'+j+'='+sum);
+                document.write(i+'*'+j+'='+sum+'&nbsp;&nbsp;')
+            }
+            document.write('</td>')
+            document.write('<br>');
+            document.write('</tr>')
+        }
+        document.write('</table>')
+    </script>
+</body>
+</html>
