@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>99乘法表</title>
+
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;;
+        }
+    </style>
 </head>
 <body>
     <script>
-        // 練習99乘法表
+        // 練習99乘法表一
         // console.log('for 99');
         
         // for(let i=1;i<=9;i++){
@@ -21,7 +30,7 @@
         // }
 
 //-------------------------------------------
-        //練習99乘法表  (補0)
+        //練習99乘法表二  (補0)
         // padStart   要用在字串string
         // 數字變成字串  (補0)
         // let test=5;
@@ -29,19 +38,53 @@
         // let testchange=teststr.padStart(2,"0");
         // console.log(testchange);
         
+        // console.log('for 99');
+        
+
+        // for(let i=1;i<=9;i++){
+            
+        //     for(let j=1;j<=9;j++){
+        //         let sum=i*j;
+        //         let sumstr=sum.toString();   //將答案轉為字串
+        //         let sumchange=sumstr.padStart(2,'0');   //將字串補0
+                               
+        //         console.log(i+'*'+j+'='+sumchange);  //  答案就為補0後的
+        //         document.write(i+'*'+j+'='+sumchange+'&nbsp;&nbsp;')
+        //     }
+            
+        //     document.write('<br>');
+        // }
+
+
+//-----------------------------------------------------
+        // 練習三
+        // 奇數行 為紅色 (if)
+        // 偶數行 為藍色
+
         console.log('for 99');
         
+
         for(let i=1;i<=9;i++){
+            
+            if(i%2==1){  //這裡帶判斷式  餘數1  奇數行row
+                document.write('<p class="red">');
+            }else{
+                document.write('<p class="blue">');
+            }
+
+            
             for(let j=1;j<=9;j++){
                 let sum=i*j;
                 let sumstr=sum.toString();   //將答案轉為字串
                 let sumchange=sumstr.padStart(2,'0');   //將字串補0
-                           
+                               
                 console.log(i+'*'+j+'='+sumchange);  //  答案就為補0後的
                 document.write(i+'*'+j+'='+sumchange+'&nbsp;&nbsp;')
             }
+            document.write('</p>');
             document.write('<br>');
         }
+
     </script>
 </body>
 </html>
