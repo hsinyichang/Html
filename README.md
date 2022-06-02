@@ -61,3 +61,5 @@
 * php  的方法是 str_pad()
 * 九九乘法表p class 換顏色
 * 九九乘法表 作成table
+* continue & break 練習
+* while 練習
