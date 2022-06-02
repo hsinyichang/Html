@@ -9,17 +9,39 @@
 <body>
     <script>
         // 練習99乘法表
+        // console.log('for 99');
+        
+        // for(let i=1;i<=9;i++){
+        //     for(let j=1;j<=9;j++){
+        //         let sum=i*j;
+        //         console.log(i+'*'+j+'='+sum);
+        //         document.write(i+'*'+j+'='+sum+'&nbsp;&nbsp;')
+        //     }
+        //     document.write('<br>');
+        // }
+
+//-------------------------------------------
+        //練習99乘法表  (補0)
+        // padStart   要用在字串string
+        // 數字變成字串  (補0)
+        // let test=5;
+        // let teststr=test.toString();//作字串轉型
+        // let testchange=teststr.padStart(2,"0");
+        // console.log(testchange);
+        
         console.log('for 99');
         
         for(let i=1;i<=9;i++){
             for(let j=1;j<=9;j++){
                 let sum=i*j;
-                console.log(i+'*'+j+'='+sum);
-                document.write(i+'*'+j+'='+sum+'&nbsp;&nbsp;')
+                let sumstr=sum.toString();   //將答案轉為字串
+                let sumchange=sumstr.padStart(2,'0');   //將字串補0
+                           
+                console.log(i+'*'+j+'='+sumchange);  //  答案就為補0後的
+                document.write(i+'*'+j+'='+sumchange+'&nbsp;&nbsp;')
             }
             document.write('<br>');
         }
-
     </script>
 </body>
 </html>
