@@ -11,12 +11,13 @@
 <body>
     <script>
         //while
-        //練習一  成精加總
+        //練習  成精加總
         //輸入學生數量
         //student1 國文
         //student1 英文
         //sutdent1 數學
         //計算總分 與平均
+        //全班總分  平均
 
         //畫面顯示結果
         //學生1  國文=>?分  英文=>?分  數學=>?分
@@ -31,27 +32,46 @@
         let input = parseInt(prompt('請輸入學生數量'));
         console.log('input', input);
 
-        
-        for(let i=1;i<=input;i++){  //跑完第1個學生的所有資料再跑第二筆
+        let allstu = input;
+        let allsum = 0;
 
-        let chinese = parseInt(prompt('學生'+i+'請輸入國文分數'));
-        let english = parseInt(prompt('學生'+i+'請輸入英文分數'));
-        let math = parseInt(prompt('學生'+i+'請輸入數學分數'));//要轉為數字型態下面的總分才能相加，不然為字串相加
-        let sum = chinese + english + math; //總分
-        let avg = sum / 3; //平均
-        let avg1 =Math.round(avg,2);
-
-        console.log('chinese', chinese);
-        console.log('english', english);
-        console.log('math', math);
-        console.log('sum', sum);
-        console.log('avg', avg1);
         
-        document.write('第'+i+'個學生');
-        document.write('國文=>'+chinese+'分','英文=>'+english+'分','數學=>'+math+'分');
-        document.write('總分=>'+sum+'分','平均=>'+avg1+'分'+'<br>');
+
+        for (let i = 1; i <= input; i++) { //跑完第1個學生的所有資料再跑第二筆
+
+            if(input>3){  //假如輸入大於3人則不跑程式了
+                document.write('太多人了');
+                break;
+            }else{
+
+            let chinese = parseInt(prompt('學生' + i + '請輸入國文分數'));
+            let english = parseInt(prompt('學生' + i + '請輸入英文分數'));
+            let math = parseInt(prompt('學生' + i + '請輸入數學分數')); //要轉為數字型態下面的總分才能相加，不然為字串相加
+            let sum = chinese + english + math; //總分
+            let avg = sum / 3; //平均
+            newavg=avg.toFixed(2);//取到小數點第二位
+            allsum += sum; //每次總分的加總
+            //allsum=allsum+sum;
+
+
+            console.log('chinese', chinese);
+            console.log('english', english);
+            console.log('math', math);
+            console.log('sum', sum);
+
+
+            document.write('第' + i + '個學生<br>');
+            document.write('國文=>' + chinese + '分　英文=>' + english + '分　數學=>' + math + '分'+'<br>');
+            document.write('總分=>' + sum + '分　平均=>' + newavg + '分' + '<br><br>');
+        }}
+        if(input<3){  //若是大於三人，則這裡全班就不顯示了
+        document.write('<hr>');//以下為全班的
+        document.write('全班人數=>' + allstu + '人');
+        document.write('全班總分=>' + allsum + '分');
+        let allavg = allsum / allstu;
+        newallavg=allavg.toFixed(2);
+        document.write('全班平均=>' + newavg + '分');
         }
-        
     </script>
 
 
