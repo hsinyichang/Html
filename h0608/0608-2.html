@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    本期開獎號碼為<br>
+    <script>
+        //array push
+        // let myArr = [1,2,3];
+        // // 今天[1,2,3,4]
+        // console.log('myArr',myArr);
+        // myArr.push(4);
+        // console.log('myArr push',myArr);
+        
+        
+        // array indexOf
+        // let myArr = [1,2,3];
+        // console.log('myArr',myArr);
+        // console.log(myArr.indexOf(1));
+        // console.log(myArr.indexOf(2));
+        // console.log(myArr.indexOf(3));
+        // console.log(myArr.indexOf(4));
+        // console.log(myArr.indexOf(5));
+        
+
+
+        //array basic
+
+        //array 邏輯 本質解決變數不夠
+        //我們班有25位同學
+        //方法一
+        //let stu1=1;
+        //let stu2=2;
+        //let stu3=3;
+
+        //方法二 array
+        //let stuArray=[1,2,3,4,5];
+
+        //while 樂透開獎
+        //1-49 六個大樂透
+        //key 不能重複 <= 防呆
+
+        //1.取出亂數  1-49
+        //Math.random
+        //Math.floor(Math.random()*(max - min) )+ min ;
+
+        // min 有包括 max 沒包括
+        // Math.floor(Math.random() * (max - min) ) + min;
+
+        // min and max 都有包括
+        // Math.floor(Math.random() * (max - min + 1) ) + min
+
+
+
+
+        //2.我要跑6次
+        let i = 1;
+        let lottery = [];
+        while (lottery.length < 6) { //長度0時也會跑一次
+            // while (i <= 6) {
+            // min 1 - max 49
+            
+            let num = Math.floor(Math.random() * (49 - 1 + 1)) + 1;
+            //後面+1是為了要讓0出來為1，48出來是49(因為random49出來是0-48)           
+            //random是取0-1的隨機2位小數(min-0*49=0、max-0.99*49=48)，floor則是取整數
+            let flag = lottery.indexOf(num);
+            // 判斷是否存array
+           
+
+            //3-3 array 內容是否重複
+            if (flag < 0) {
+                //array push 增加array的內容
+                
+                lottery.push(num);
+                // array 長度
+                // lottery.length
+                document.write(`第${i}次開獎---第${lottery.length}個號碼 => ${num}<br>`);
+            }
+
+
+            i++;
+        }
+
+        console.log(lottery);
+        //3.防呆
+    </script>
+
+
+</body>
+
+</html>
