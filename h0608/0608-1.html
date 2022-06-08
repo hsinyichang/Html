@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生成績總分與平均</title>
+</head>
+
+<body>
+    <script>
+        //while
+        //練習一  成精加總
+        //輸入學生數量
+        //student1 國文
+        //student1 英文
+        //sutdent1 數學
+        //計算總分 與平均
+
+        //畫面顯示結果
+        //學生1  國文=>?分  英文=>?分  數學=>?分
+        //學生1  總分=>?分  平均=>?分
+
+        //學生2  國文=>?分  英文=>?分  數學=>?分
+        //學生2  總分=>?分  平均=>?分
+
+        //以此類推
+        //-----------------------------------------
+
+        let input = parseInt(prompt('請輸入學生數量'));
+        console.log('input', input);
+
+        
+        for(let i=1;i<=input;i++){  //跑完第1個學生的所有資料再跑第二筆
+
+        let chinese = parseInt(prompt('學生'+i+'請輸入國文分數'));
+        let english = parseInt(prompt('學生'+i+'請輸入英文分數'));
+        let math = parseInt(prompt('學生'+i+'請輸入數學分數'));//要轉為數字型態下面的總分才能相加，不然為字串相加
+        let sum = chinese + english + math; //總分
+        let avg = sum / 3; //平均
+        let avg1 =Math.round(avg,2);
+
+        console.log('chinese', chinese);
+        console.log('english', english);
+        console.log('math', math);
+        console.log('sum', sum);
+        console.log('avg', avg1);
+        
+        document.write('第'+i+'個學生');
+        document.write('國文=>'+chinese+'分','英文=>'+english+'分','數學=>'+math+'分');
+        document.write('總分=>'+sum+'分','平均=>'+avg1+'分'+'<br>');
+        }
+        
+    </script>
+
+
+
+
+</body>
+
+</html>
