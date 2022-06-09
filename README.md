@@ -70,3 +70,15 @@
 * 大胃王挑戰 while 迴圈
 * do while 遊樂場設施 (低消)
 * hw 輸入兩個數 計算0-1000 所有可被3&11除的數
+## 0609
+* ARRAY介紹
+* array.forach
+* array.push()增加元素到最後一個
+* array.pop()減少最後一個元素
+* array.shift()刪除第一個元素
+* array.unshift()增加元素到第一個
+* array.splice()刪除(指定數量位置)元素
+* array toString  陣列變字串
+* array concact 合併陣列
+* ... 分散運算子  也等於concact
+* indexOf() 搜尋字元  -1表示不存在
