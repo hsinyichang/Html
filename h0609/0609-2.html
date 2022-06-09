@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 將[1,3,5,7,9]=>轉換為[2,6,10,14,18]
+        
+        //foreach
+        let a=[1,3,5,7,9];
+        let newa=[];
+        a.forEach(function(value,key){
+            newa.push(value*2);
+        })
+        console.log('newa',newa);
+
+
+        //map 透過function return給值建立一個新的陣列
+        let b=[1,3,5,7,9];
+        // let mapb=b.map(function(value){
+        //     return value*2;
+        // })
+        let mapb=b.map((value)=>value*2);  //當只有一個(value)才可以用箭頭函式做
+        console.log('mapb',mapb);
+
+
+
+        //--------------------------------------
+        //練習一
+        //長榮給年終最多40個月
+        //每人的月薪[1,2,3,4,5,8,7,5,4,6](單位:萬)
+        //[1-3] 給20個月
+        //[4-5] 給40個月
+
+        let moneyArr=[1,2,3,4,5,8,7,5,4,6];
+        let mapmoneyarr=moneyArr.map(function(value){
+            if(value>=4){
+                return value *40;
+            }else{
+                return value*20;
+            }
+        });   //用map 給值
+        console.log(mapmoneyarr);
+        //-----------------------------------------
+
+
+
+        //array filter  過濾篩選
+        let i=[1,2,3,4,5,6,7,8,9,10];
+        let j=[];
+        i.forEach(function(value){
+            if(value%2==0){  //要篩出偶數
+                j.push(value);  //把篩出來的數push給新的j陣列
+            }
+        });
+        console.log(j);
+
+        let filter=[1,2,3,4,5,6,7,8,9,10];
+        let newfilter=filter.filter(function(value){
+            return(value%2==1);
+        })
+        console.log(newfilter);
+
+    </script>
+</body>
+</html>
