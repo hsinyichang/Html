@@ -72,7 +72,7 @@
 * hw 輸入兩個數 計算0-1000 所有可被3&11除的數
 ## 0609
 * ARRAY介紹
-* array.forach
+* array.foreach 給值  若要給值則用push
 * array.push()增加元素到最後一個
 * array.pop()減少最後一個元素
 * array.shift()刪除第一個元素
@@ -82,3 +82,5 @@
 * array concact 合併陣列
 * ... 分散運算子  也等於concact
 * indexOf() 搜尋字元  -1表示不存在
+* function 可改為箭頭函式  ex:((value)=>(value)*10)
+* map、filter、reduce
