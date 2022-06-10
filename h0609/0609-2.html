@@ -51,6 +51,7 @@
 
 
         //array filter  過濾篩選
+        //直接使用foreach
         let i=[1,2,3,4,5,6,7,8,9,10];
         let j=[];
         i.forEach(function(value){
@@ -59,12 +60,38 @@
             }
         });
         console.log(j);
-
+        
+        //filter
         let filter=[1,2,3,4,5,6,7,8,9,10];
         let newfilter=filter.filter(function(value){
             return(value%2==1);
         })
         console.log(newfilter);
+
+        //-------------------------------------------
+        // array 加總 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // foreach 111
+    // reduce
+
+    // foreach
+    let reduceArr = [1, 2, 3];
+    // let newReduceArr = [];
+    // let sum = 0;
+    // reduceArr.forEach(value => {
+    //     sum += value;
+    // });
+    // console.log(sum);
+
+    // w3schools js reduce
+    // total 加總累積
+    // value 現在的值
+    let sum = reduceArr.reduce(function (total, value) {
+        console.log('hello reduce');
+        console.log(total);
+        console.log(value);
+        return total + value;
+    });
+    console.log(sum);
 
     </script>
 </body>
