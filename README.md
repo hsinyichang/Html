@@ -92,3 +92,4 @@
 * Object.entries(obj); key+value
 * 練習一['a=>amy','b=>bob','c=>cat'] 字串相加
 * 練習二使用foreach  +table
+* 練習三 reduce 累加總
