@@ -1,4 +1,5 @@
 # 目錄
+* 開啟markdown(ctrl+k+v)
 
 ## 0413  
 * 介紹區塊卡片製作 
@@ -93,3 +94,5 @@
 * 練習一['a=>amy','b=>bob','c=>cat'] 字串相加
 * 練習二使用foreach  +table
 * 練習三 reduce 累加總
+* function 呼叫練習(裡面放變數)
+  * this(是呼叫上一層的)
