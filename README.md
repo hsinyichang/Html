@@ -84,3 +84,8 @@
 * indexOf() 搜尋字元  -1表示不存在
 * function 可改為箭頭函式  ex:((value)=>(value)*10)
 * map、filter、reduce
+## 0615
+* const Array
+* for in 、 for of=>get value(只能用於array)
+* PHP 的 foreach
+* object轉型為array 的for of
