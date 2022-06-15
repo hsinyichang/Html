@@ -88,4 +88,7 @@
 * const Array
 * for in 、 for of=>get value(只能用於array)
 * PHP 的 foreach
-* object轉型為array 的for of
+* object轉型為array 的for of 取值
+* Object.entries(obj); key+value
+* 練習一['a=>amy','b=>bob','c=>cat'] 字串相加
+* 練習二使用foreach  +table
