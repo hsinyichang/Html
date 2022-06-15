@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    object function
+    <hr>
+
+    <script>
+        let student = {
+            'id':1,
+            'name':'gina',
+            'func1':function(){
+                console.log('this',this);//console所在的位置上一層，會把id name也給列出來
+                document.write('hello');
+            },
+            'fnarrow':value=>{
+                console.log('fnarrow',this);//global window
+            }
+        }
+        // console.log('this',this);//global   在外部的會顯示window
+        student.func1();
+        student.fnarrow();
+        document.write('<br>'+student.id);
+        document.write('<br>'+student.name);
+        
+    </script>
+</body>
+</html>

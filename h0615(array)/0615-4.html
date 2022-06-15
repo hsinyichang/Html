@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    function <br>
+    <hr>
+
+    <script>
+        function sayhi() {
+            document.write('hi~');
+        }
+        sayhi();
+        console.log(sayhi);
+
+    document.write('<hr>');
+        let sayhihi = function () { //把function 丟在變數裡
+            document.write('hihi!!');
+        }
+        console.log(sayhihi);
+        sayhihi();
+
+    document.write('<hr>');
+
+        function sayhibyname(name) {
+            document.write('hello　' + name + '<br>');
+        }
+        sayhibyname('eric');
+        sayhibyname('ann');
+
+    document.write('<hr>');
+
+        //---------練習let myfunction2=有參數的function------
+        let myfunction2 = function (name = 'gina') {
+            document.write(`hi ${name} <br>`);
+        }
+        myfunction2('dog');
+        myfunction2();
+
+        //---------練習let myfunction3=有參數的function------
+    document.write('<hr>');
+
+        function sum(num1, num2) {
+
+            return num1 + num2;
+        }
+        let result = sum(5, 10);
+        document.write(result);
+
+    document.write('<hr>');
+        let arrowfunc=(num1,num2)=>num1*num2;
+        let result1=arrowfunc(1,2);
+        let result2=arrowfunc(6,7);
+        document.write(result1+'<br>');
+        document.write(result2);
+
+
+
+
+    </script>
+</body>
+
+</html>

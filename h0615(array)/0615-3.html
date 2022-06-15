@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let students = [ //php是用=>
+            {
+                'id': 1,
+                'name': 'amy',
+                'tel': '0911111111'
+            },
+            {
+                'id': 2,
+                'name': 'bob',
+                'tel': '0911222222'
+            }
+        ];
+
+        console.log(students);
+        // console.log(students[0]);
+
+        //練習foreach 顯示 每個obj 資料
+        students.forEach(value => {
+            console.log(value);
+        });
+
+        //-----------練習二-----------------
+        //建立table
+        //id 姓名 電話
+
+        //[] + {} => [ {} , {}]
+        //我要全班每位學生的資料
+        // let students(全班) = [{學生0},{學生1},{學生2},{學生3},{學生4}]
+
+
+        document.write('<table>')
+        let Students = [ //php是用 =>
+            {
+                'id': 1,
+                'name': 'amy',
+                'tel': '0911111111',
+                'bonus': '1000'
+            },
+            {
+                'id': 2,
+                'name': 'bob',
+                'tel': '0911222222',
+                'bonus': '2000'
+            }
+        ];
+
+        console.log(Students);
+        // console.log(students[0]);
+
+        document.write('<tr>')
+        document.write('<td>');
+        document.write('id');
+        document.write('</td>');
+        document.write('<td>');
+        document.write('name');
+        document.write('</td>');
+        document.write('<td>');
+        document.write('tel');
+        document.write('</td>');
+        document.write('</tr>');
+        //以上為row1的title
+        document.write('<tr>'); //以下為row2、3、4...之後的(跑foreach)
+        Students.forEach(value => {
+            document.write('<td>');
+            document.write(value.id);
+            document.write("</td>");
+
+            document.write('<td>')
+            document.write(value['name']);
+            document.write("</td>");
+
+            document.write('<td>')
+            document.write(value['tel']);
+            document.write("</td>");
+            
+            document.write('</tr>')
+        });
+
+        document.write('</table>')
+
+
+
+        //-------------練習三-----------------
+        //每個人的獎金總共加起來多少
+        //console.log 顯示total sum
+        let sum = Students.reduce((total, value) => {
+            
+            const bonusNum = Number(value.bonus);
+            return total + bonusNum;
+        }, 0);//要設初始值
+        console.log('總共bonus為:', sum);
+    </script>
+
+</body>
+
+</html>
