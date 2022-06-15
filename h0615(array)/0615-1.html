@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關聯式陣列</title>
+</head>
+
+<body>
+    <script>
+        const myarr = [1, 2, 3];
+        console.log(myarr);
+        
+        for(const value of myarr){//for of=>get value,這裡不能用myobject
+            console.log(value);// 1 2 3
+        }
+
+        //----------------------------
+        const myobject = { //Object 物件  這裡是用冒號(php用=>箭頭函式)
+            'bob': '28',
+            'jack': '30',
+            'alan': '25'
+        };
+        console.log(myobject);
+        
+        for(const key in myobject){
+            console.log(key); //bob jack alan
+            console.log(myobject[key]);// 28 30 25
+            //bob 28 jack 30 alan 25
+        }
+        //----------轉型為array才能用for of--------------
+        let keysmyobj=Object.keys(myobject);
+        let valuemyobj=Object.values(myobject);
+        for(const key of keysmyobj){
+            console.log(key);// bob jack alan
+        }
+        //若這裡用for in  則是為 0 1 2
+        
+        for(const value of valuemyobj){
+            console.log(value);// 
+
+        }
+    </script>
+
+</body>
+
+</html>

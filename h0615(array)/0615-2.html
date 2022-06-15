@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    const obj={
+        a:'amy',
+        b:'bob',
+        c:'cat'
+    }
+    console.log(Object.keys(obj));//[a,b,c]
+    console.log(Object.values(obj));//['amy','bob','cat']
+    console.log(Object.entries(obj));//['a','amy']['b','bob']['c','cat']
+    let entriesArr=Object.entries(obj);//使物件轉為陣列
+
+
+    //map
+    //array map
+    const mapArr=entriesArr.map(value =>{
+        console.log(value);
+        let [first,second]=value; //['a','amy']['b','bob']['c','cat']
+        //let [a,b]=value   這樣也可以
+        
+        
+        //小練習 start
+        //顯示map array  ['a=>amy','b=>bob','c=>cat']
+        const tostringobj=first+'=>'+second;//變成字串相加      
+        console.log(tostringobj);
+        return tostringobj;
+        //小練習 end
+
+        // return second//['amy','bob','cat']
+    })
+    console.log(mapArr);
+    
+    //foreach
+        entriesArr.forEach(value=>{
+        console.log(value);  //['a','amy']
+        console.log(value[0]);//a
+        console.log(value[1]);//amy
+
+    })
+    
+    
+    
+
+
+
+
+</script>
+
+</body>
+</html>
