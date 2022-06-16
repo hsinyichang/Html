@@ -77,7 +77,7 @@
         console.log(value.dataset.test);
 
         })
-        let sum=[...changeblue];
+        let sum=[...changeblue];//因這裡不是object 所以用...把每筆資料轉為array
         let sumall=sum.reduce((total,value)=>{
             const testsum=Number(value.dataset.test);
             return total+testsum;
