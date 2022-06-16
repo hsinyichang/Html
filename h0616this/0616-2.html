@@ -11,7 +11,10 @@
     <a href="">link text</a><br>
     <button>mybtn</button>
     <p>hello</p>
+    <p>hihi</p>
+    <p id="yes">yes</p>
     <div>hey</div>
+    <aside>love</aside>
 
 
 
@@ -36,11 +39,38 @@
         console.log(p);
         p.textContent='im gina';
 
+        const yes=document.getElementById('yes');
+        yes.innerHTML='<nav>no</nav>'; //變更屬性
+        console.log(yes);
+
         const div=document.querySelector('div');
         let str=div.textContent;//get dom text
         console.log(str);//抓內容
         console.log(div);//抓屬性
         div.textContent='yoyo';//set dom text
+
+
+
+        //---------練習一---------------
+        //更改顏色
+        const change=document.querySelector('aside');
+        change.style.color='red';
+        //可更換所有p 的每筆顏色
+        const changeblue=document.querySelectorAll('p');
+        console.log(changeblue); //有3個<p>
+        changeblue[0].style.color='blue'; //可抓取一筆一筆資料
+        changeblue[1].style.color='blue';
+        changeblue[2].style.color='blue';
+        
+        
+        //直接更換所有p 的顏色
+        // changeblue.forEach(value=>{ //使用foreach 變更'所有'p為綠色
+        //     value.style.color='green';
+        // })
+        changeblue.forEach(function(value){ //使用foreach 變更'所有'p為綠色
+            value.style.color='green';
+        })
+        
 
     </script>
 </body>
