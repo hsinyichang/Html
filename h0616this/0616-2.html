@@ -10,9 +10,12 @@
     <h1>a head</h1><!--會被js 改為hi-->
     <a href="">link text</a><br>
     <button>mybtn</button>
-    <p>hello</p>
-    <p>hihi</p>
-    <p id="yes">yes</p>
+    <p data-test="100">hello</p>
+    <p data-test="200">hihi</p>
+    <p data-test="300" id="yes">yes</p>
+    <p data-test="400">123</p>
+    <p data-test="500">456</p>
+    <p data-test="600">789</p>
     <div>hey</div>
     <aside>love</aside>
 
@@ -67,9 +70,19 @@
         // changeblue.forEach(value=>{ //使用foreach 變更'所有'p為綠色
         //     value.style.color='green';
         // })
-        changeblue.forEach(function(value){ //使用foreach 變更'所有'p為綠色
-            value.style.color='green';
+        changeblue.forEach(function(value,index){ //使用foreach 變更'所有'p為綠色
+            if(index%2==0){ //索引值為偶數則↓
+        
+        value.style.color='green';}
+        console.log(value.dataset.test);
+
         })
+        let sum=[...changeblue];
+        let sumall=sum.reduce((total,value)=>{
+            const testsum=Number(value.dataset.test);
+            return total+testsum;
+        },0);
+        console.log(sumall);
         
 
     </script>
