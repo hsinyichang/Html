@@ -14,17 +14,34 @@
     <p>
         <button type="button" id="btn2">btn2</button>
     </p>
+    <p>
+        <button type="button" id="btn3">btn3</button>
+    </p>
     <script>
+        //event
+        //方法一  在button裡使用onclick事件
+
         function btn1fun(){
             console.log('btn1fun ok');
         }
 
+        //方法二
+        //button只設id， 先抓取id，在設onclick function
         const btn2=document.getElementById('btn2');
         console.log(btn2);
         btn2.onclick=function(){
             console.log('btn2 ok');
         }
 
+
+        //方法三
+        //addEventlistener
+        const btn3 = document.getElementById('btn3');
+        console.log('btn3',btn3);
+        btn3.addEventListener('click',function(event){
+            console.log('btnFun3 ok');
+            console.log(event);
+        });
     </script>
 </body>
 </html>
