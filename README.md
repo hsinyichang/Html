@@ -87,7 +87,7 @@
 * map、filter、reduce
 ## 0615
 * const Array
-* for in 、 for of=>get value(只能用於array)
+* for in 、 for of=>get value(只能用於array、Object要記得轉型Object.value)
 * PHP 的 foreach
 * object轉型為array 的for of 取值
 * Object.entries(obj); key+value
