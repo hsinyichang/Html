@@ -93,6 +93,6 @@
 * Object.entries(obj); key+value
 * 練習一['a=>amy','b=>bob','c=>cat'] 字串相加
 * 練習二使用foreach  +table
-* 練習三 reduce 累加總
+* 練習三 reduce 累加總 (total+value)
 * function 呼叫練習(裡面放變數)
   * this(是呼叫上一層的)
