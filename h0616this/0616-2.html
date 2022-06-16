@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector</title>
+</head>
+<body>
+    <h1>a head</h1><!--會被js 改為hi-->
+    <a href="">link text</a><br>
+    <button>mybtn</button>
+    <p>hello</p>
+    <div>hey</div>
+
+
+
+    <script>
+        const myH1=document.querySelector('h1');//先找到h1
+        console.log(myH1);
+        myH1.textContent='hi';//把h1的文字內容改成hi
+
+
+        //練習一   a tag 文字
+        //text link text =>link
+        //用js  更改document 的內容
+        const a=document.querySelector('a');
+        console.log(a);
+        a.textContent='link';
+
+        const button=document.querySelector('button');
+        console.log(button);
+        button.textContent='btn';
+
+        const p=document.querySelector('p');
+        console.log(p);
+        p.textContent='im gina';
+
+        const div=document.querySelector('div');
+        let str=div.textContent;//get dom text
+        console.log(str);//抓內容
+        console.log(div);//抓屬性
+        div.textContent='yoyo';//set dom text
+
+    </script>
+</body>
+</html>
