@@ -112,4 +112,5 @@
   * 使用foreach 變更css
   * let sum=[...changeblue];//因這裡不是object 所以用...把每筆資料轉為array
   * setAttribute  設定屬性 a tag 更改網址
-* EVENT button onclick
+* EVENT 
+  * button onclick、addEventlistener
