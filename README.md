@@ -30,7 +30,7 @@
 ##
 ## 0518
 * 介紹function()
-* num1  oprion  num2  運算  resultP.innerText =myString1;
+* num1  option  num2  運算  resultP.innerText =myString1;
 * 存提款使用function()
 * 有無跳脫字元
 * console.log(`hello ${name} 午安`);
