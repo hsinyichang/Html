@@ -103,7 +103,11 @@
   * 箭頭函式的this是指向window(無用)
 * DOM
   * 用js  更改document 的內容
-  * html 裡面必須要有東西 queryselector  才能抓的到東西
+  * html 裡面必須要有東西 queryselector  才能抓的到東西(但只限第一筆)
   * const myH1=document.querySelector('h1');
   * console.log(myH1);
   * myH1.textContent='hi';
+  * 變更顏色、文字   .style.color
+  * querySelectorAll(抓取全部的)
+  * 使用foreach 變更css
+  * let sum=[...changeblue];//因這裡不是object 所以用...把每筆資料轉為array
