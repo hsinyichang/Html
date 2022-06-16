@@ -101,3 +101,9 @@
   * function 兩數相加 外面要用let 宣告一個變數來存回傳值作呈現
   * function 的簡化this 也是指向物件
   * 箭頭函式的this是指向window(無用)
+* DOM
+  * 用js  更改document 的內容
+  * html 裡面必須要有東西 queryselector  才能抓的到東西
+  * const myH1=document.querySelector('h1');
+  * console.log(myH1);
+  * myH1.textContent='hi';
