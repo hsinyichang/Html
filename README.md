@@ -58,33 +58,38 @@
 * 倒三角星星  作業
 ## 0602
 * 九九乘法表練習
-* 字串轉型  補0  padStart()
-* php  的方法是 str_pad()
-* 九九乘法表p class 換顏色
-* 九九乘法表 作成table
+  * 字串轉型  補0  padStart()
+  * php  的方法是 str_pad()
+  * p class 換顏色
+  * 作成table
 * continue & break 練習
 * while 練習
 ## 0608
-* 全班學生成績加總與平均(國、英、數)
-* 若輸入人數大於3則不跑程式(break)
-* 樂透開獎號碼 49取6 不重複 .push() .indexOf()
-* 大胃王挑戰 while 迴圈
-* do while 遊樂場設施 (低消)
-* hw 輸入兩個數 計算0-1000 所有可被3&11除的數
+* for迴圈
+  * 全班學生成績加總與平均(國、英、數)
+  * 若輸入人數大於3則不跑程式(break)
+* while迴圈(Math.random()、.indexOf)
+  * 樂透開獎號碼 49取6 不重複 .push() .indexOf()
+  * 大胃王挑戰
+* do while迴圈 
+  * 遊樂場設施 (低消)
+* 以上三個迴圈
+  * 列出0-100內的奇數  
+  * 輸入兩個數 計算0-1000 所有可被3&11除的數
 ## 0609
 * ARRAY介紹
-* array.foreach 給值  若要給值則用push
-* array.push()增加元素到最後一個
-* array.pop()減少最後一個元素
-* array.shift()刪除第一個元素
-* array.unshift()增加元素到第一個
-* array.splice()刪除(指定數量位置)元素
-* array toString  陣列變字串
-* array concact 合併陣列
-* ... 分散運算子  也等於concact
-* indexOf() 搜尋字元  -1表示不存在
-* function 可改為箭頭函式  ex:((value)=>(value)*10)
-* map、filter、reduce
+  * array.foreach 給值  若要給值則用push
+  * array.push()增加元素到最後一個
+  * array.pop()減少最後一個元素
+  * array.shift()刪除第一個元素
+  * array.unshift()增加元素到第一個
+  * array.splice()刪除(指定數量位置)元素
+  * array toString  陣列變字串
+  * array concact 合併陣列
+  * ... 分散運算子  也等於concact
+  * indexOf() 搜尋字元  -1表示不存在
+  * function 可改為箭頭函式  ex:((value)=>(value)*10)
+  * map、filter、reduce
 ## 0615
 * const Array
 * for in 、 for of=>get value(只能用於array、Object要記得轉型Object.value)
@@ -111,6 +116,7 @@
   * querySelectorAll(抓取全部的)
   * 使用foreach 變更css
   * let sum=[...changeblue];//因這裡不是object 所以用...把每筆資料轉為array
-  * setAttribute(屬性,內容)  設定屬性 a tag 更改網址  改變class屬性 .red  .green
+  * setAttribute(設定屬性,內容)  設定屬性 a tag 更改網址  改變class屬性 .red  .green
+  * getAttribute(抓屬性)
 * EVENT 
   * button onclick、addEventlistener
