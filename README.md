@@ -96,3 +96,8 @@
 * 練習三 reduce 累加總 (total+value)
 * function 呼叫練習(裡面放變數)
   * this(是呼叫上一層的)
+## 0616
+* Object.this
+  * function 兩數相加 外面要用let 宣告一個變數來存回傳值作呈現
+  * function 的簡化this 也是指向物件
+  * 箭頭函式的this是指向window(無用)
