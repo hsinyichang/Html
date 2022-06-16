@@ -5,9 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {}
+    </style>
 </head>
 <body>
     <a href="https://github.com/hsinyichang">link</a>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
 
 <script>
     const a=document.querySelector('a');
@@ -15,6 +28,19 @@
     console.log(a.getAttribute('href'));//還沒變更之前的
     a.setAttribute('href','http://220.128.133.15/s1110210/')
     console.log(a.getAttribute('href'));//變更後的
+
+
+    // attribute get set class 
+    const myP = document.querySelector('p');
+    myP.setAttribute('class', 'red');
+
+    // 練習一
+    // 全部的p green setAttribute方式 querySelectAll
+    const allP = document.querySelectorAll('p');
+    allP.forEach(value => {
+        console.log(value);
+        value.setAttribute('class', 'red');
+    });
 </script>
 </body>
 </html>
