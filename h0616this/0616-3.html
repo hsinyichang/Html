@@ -33,16 +33,18 @@
 
 
     // attribute get set class 
-    const myP = document.querySelector('p');
-    myP.setAttribute('class', 'red');
+    const myP = document.querySelector('p'); //只抓第一個p
+    myP.setAttribute('class', 'red');//設myp  屬性class 為red  再去style設定
 
     // 練習一
     // 全部的p green setAttribute方式 querySelectAll
-    const allP = document.querySelectorAll('p');
+    const allP = document.querySelectorAll('p'); //抓全部的p
     allP.forEach(value => {
         console.log(value);
         value.setAttribute('class', 'green');
     });
+
+    
 </script>
 </body>
 </html>
