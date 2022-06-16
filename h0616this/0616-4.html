@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+
+    </style>
 </head>
 <body>
     event
@@ -20,6 +29,15 @@
     <p>
         <button type="button" id="btn4">btn4</button>
     </p>
+
+    <p id="result">
+        Lorem ipsum dolor sit amet
+    </p>
+    <p id="result2">
+        Lorem ipsum dolor sit amet
+    </p>
+
+
     <script>
 
 
@@ -54,12 +72,34 @@
         const btn4 = document.getElementById('btn4');
         console.log('btn4',btn4);
         btn4.addEventListener('click',btn4fun);//若把func移到外面 就不用加()
+        // btn4.addEventListener('mouseover',mouseoverfun);
+        // btn4.addEventListener('mouseout',mouseoutfun);
+        
+        const result=document.getElementById('result');//設個變數result抓p.id=result
+        
+        
         function btn4fun(){
             console.log('btnFun4 ok');
+            // result.classList.toggle("green"); //classList 點按會一下綠色一下原本色
+            console.log(result.getAttribute('class'));//抓到class屬性
+            if (result.getAttribute('class') == 'green') { //若抓到屬性為綠色則↓
+                result.setAttribute('class', 'red');
+            } else {
+                result.setAttribute('class', 'green');//不是綠色則設為綠色↑然後再重複跑這個迴圈，就會形成點按為綠紅綠紅...
+            }
         }
 
 
-        
+        // function mouseoverfun() {
+        //     console.log('mouseover');
+        //     console.log('滑鼠進入');
+        // }
+
+        // function mouseoutfun() {
+        //     console.log('mouseout');
+        //     console.log('滑鼠出去');
+        // }
+
     </script>
 </body>
 </html>
