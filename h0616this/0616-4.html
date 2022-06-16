@@ -17,7 +17,12 @@
     <p>
         <button type="button" id="btn3">btn3</button>
     </p>
+    <p>
+        <button type="button" id="btn4">btn4</button>
+    </p>
     <script>
+        
+
         //event
         //方法一  在button裡使用onclick事件
 
@@ -42,6 +47,16 @@
             console.log('btnFun3 ok');
             console.log(event);
         });
+
+
+        //方法四
+        //addEventlistener
+        const btn4 = document.getElementById('btn4');
+        console.log('btn4',btn4);
+        btn4.addEventListener('click',btn4fun);//若把func移到外面 就不用加()
+        function btn4fun(){
+            console.log('btnFun4 ok');
+        }
     </script>
 </body>
 </html>
