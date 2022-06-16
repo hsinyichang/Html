@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    object this
+    <script>
+        obj={
+            'id':1,
+            'name':'gina',
+            'fun1':function(){
+                console.log('this',this);
+                console.log(this.id);
+                console.log(this.name);
+            }
+        };
+        obj.fun1();
+    
+
+        //------練習一----------
+        //新增兩個變數
+        //num1,num2
+        //function => sum=num1+num2
+
+        obj1={
+            'id':1,
+            'name':'gina',
+            'num1':5,
+            'num2':10,
+            'fun1':function(){
+                console.log('fun1',this);
+                console.log(this.id);
+                console.log(this.name);
+            },
+            fun2(){ //fun1的簡化
+                console.log('fun2');
+                console.log('fun2',this);
+            },
+            'sum':function(){ //需要宣告變數來存回傳值來呈現
+                return this.num1+this.num2; 
+            },
+            'sum1':function(n1=this.num1,n2=this.num2){
+                return n1 + n2;
+                
+            },
+            'arrowFun1': () => {    //裡面的箭頭函式是指向window
+                console.log('arrowFun1');
+                console.log('arrow this',this);
+            }
+        };
+        obj1.fun1();
+        obj1.fun2();
+        
+        let mysum=obj1.sum();
+        console.log(mysum);
+
+        let mysum1=obj1.sum1();
+        console.log(mysum1);
+        
+        // 箭頭 this / arrow function
+        // arrow this window
+        obj1.arrowFun1();
+       
+    </script>
+</body>
+</html>
