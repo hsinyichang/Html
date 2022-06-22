@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript練習五</title>
+</head>
+<body>
+    <script>
+    // 1存款多少
+    // 2後續動作-領錢或轉帳
+
+    // 領錢時
+    // 輸入領錢金額
+    // 判斷是否足夠領取
+    // 可以領的話要領多少 存款餘額為
+    // 不可以領 則餘額不足
+
+    // 轉帳時
+    // 轉帳的帳號
+    // 輸入轉帳金額
+    // 判斷是否足夠轉帳
+    // 轉出多少  轉給誰  存款餘額剩多少
+    // 不可以轉 則餘額不足
+
+    let save=parseInt(prompt('輸入存款','0'));
+    let action=parseInt(prompt('領錢為1或者轉帳為2','1or2'));
+    if(action==1){
+        let money=parseInt(prompt('領錢金額','0'));
+        if(save>money){
+            console.log('存款金額為',save);
+            console.log('領錢金額為',money);
+            result=save-money;
+            save=result;
+            console.log('存款餘額為',save);
+        }else{
+            console.log('存款餘額不足領取');
+        }
+    }else{
+        let account=parseInt(prompt('輸入轉帳帳號','0'));
+        let accountmoney=parseInt(prompt('輸入轉帳金額','0'));
+        if(save>accountmoney){
+            console.log('存款金額為',save);
+            console.log('轉帳金額為',accountmoney);
+            let who=promt('轉給誰','人名');
+            console.log('轉帳給',who);
+            result=save-accountmoney;
+            save=result;
+            console.log('存款餘額為',save);
+        }else{
+            console.log('存款餘額不足領取');
+        }
+    }
+    </script>
+</body>
+</html>

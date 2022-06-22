@@ -1,0 +1,33 @@
+/*{
+    box-sizing: border-box;
+    border: 1px solid black;
+}*/
+body{
+    margin: 0;
+}
+.card-list{
+    display: flex; /*只能放外容器(container)*/
+    justify-content: center;/*控制水平對齊位置，就是主軸方向*/
+    flex-wrap: wrap;/*網頁寬度有改變時可自動換行*/
+}
+.card{
+    width: 300px;
+    margin: 15px 15px;
+    box-shadow: 0px 8px 8px rgba(0,0,0,0.4);/*水平 垂直 模糊程度*/
+    border-radius: 8px;/*圓角*/
+    overflow: hidden;/*超出格子部份隱藏*/
+    transition: all .3s ease;
+}
+.card-img{
+    width: 100%;
+    
+}
+.card-body{/*內縮*/
+    padding: 20px 20px;
+}
+.card-title{
+    margin-top: 0;
+}
+.card-text{
+    margin-bottom: 0;
+}

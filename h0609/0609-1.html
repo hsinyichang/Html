@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array練習</title>
+</head>
+<body>
+    <script>
+        //練習一  
+        //建立自己的array
+        let myArr=['a','b','c','d'];
+
+
+        //練習二
+        //用key & value console.log出來
+        console.log(myArr[0]); //a
+        console.log(myArr[1]); //b
+        console.log(myArr[2]); //c
+        console.log(myArr[3]); //d
+
+
+        //練習三
+        //foreach 抓出全部的值        
+        myArr.forEach(function(value,key){
+            
+            console.log(value);
+        });
+        
+        //push 增加一個元素在最後面
+        myArr.push('e');
+        console.log(myArr);
+
+        //---------------------------------
+        let numArr=[1,3,5,7,9];
+        let sum=0;
+        numArr.forEach(function(value,key){
+            
+            sum=sum+value;
+            console.log(sum);
+        })
+        //----------------------------------
+
+        //pop  減少最後一個元素
+        let popArr=[1,3,5,7,9];
+        popArr.pop();
+        console.log('popArr',popArr);
+        console.log(popArr[3]); //顯示7
+        popArr[4]=9; //直接更改一個9到[4]
+        console.log(popArr); //1,3,5,7
+        console.log(popArr[4]);//顯示9
+
+        //shift/unshift  刪除/增加第一個元素
+
+        let shiftArr=[1,2,3,4,5];
+        shiftArr.shift(); //刪除1
+        console.log(shiftArr); //2,3,4,5
+
+        shiftArr.unshift(9); //增加9到第一個
+        console.log(shiftArr);// 9,2,3,4,5
+
+
+        //splice 刪除(指定位置)元素
+        let spliceArr=[1,2,3,4,5];
+        // spliceArr.splice(3); //從第[3]個(包含)往後刪除(等於把4,5刪除)
+        spliceArr.splice(1,2); //從[1]往後刪除2個(等於把2,3刪除)
+        console.log(spliceArr);
+
+        //array toString  陣列變字串
+        let stringArr=['a','b','c'];
+        let getString=stringArr.toString();
+        console.log(getString);  //把陣列輸出字串
+
+        //concact 合併陣列
+        let a1=[1,2,3];
+        let a2=[4,5,6];
+        let a3=a1.concat(a2);
+        console.log(a3);
+
+        //... 分散運算子 spread operator
+        let aa=['a','b','c'];
+        let bb=['d','e','f'];
+        let a4=[...aa,...bb];//也等於concact合併
+        console.log(a4);
+
+        //indexOf()
+        let arrIndexOf=['a','b','c'];
+        console.log('arrIndexOf',arrIndexOf);
+        console.log(arrIndexOf.indexOf('a')); //0
+        console.log(arrIndexOf.indexOf('b')); //1
+        console.log(arrIndexOf.indexOf('c')); //2
+        console.log(arrIndexOf.indexOf('dog')); //-1 不存在
+
+
+
+    </script>
+</body>
+</html>

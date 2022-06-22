@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript練習三</title>
+</head>
+<body>
+    <script>
+        // 輸入兩個數字
+        // 比大小或者輸入錯誤
+        
+        
+        let A=parseInt(prompt('inputnumA','0'));//強制轉型為數字
+        let B=parseInt(prompt('inputnumB','0'));
+        console.log('A='+A+' B='+B);//'字串'組合要用+
+        
+        if(A>B){
+            console.log(A+'>'+B);
+        }else if(A<B){
+            console.log(A+'<'+B);
+        }else if(A=B){
+            console.log(A+'='+B);
+        }else{
+            console.log('error');
+        }
+    </script>
+</body>
+</html>
