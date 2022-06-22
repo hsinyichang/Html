@@ -9,24 +9,82 @@
 </head>
 
 <body>
-    <div>
-        <p>
+    <div id="div1">
+        <p id="p1" onclick="delp1()">  <!--也可在這直接加上onclick 事件 (點擊文字即可呼叫function)-->
             Lorem ipsum dolor sit amet.
         </p>
+        <p id="p2" onclick="delp2()">
+            Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+        </p>
     </div>
+    <button type="button" onclick="append()">新增文字</button>
+    <button type="button" onclick="del()">刪除</button>
+    
+    
     
     <script>
-        // 2.1 建立P元素
+        // 2.1 建立P子元素(或其他元素ex: a標籤  h1標籤)
         // 2.2 建立text
         // 2.3 建立關聯
 
+        // 2.1 建立P元素(createElement)
+        const pElement = document.createElement('p');
+        // 2.2 建立text(createTextNode)
+        const textTextNode = document.createTextNode('hello 您好嗎 衷心感謝');        
+        // 2.3 建立關聯
+        pElement.appendChild(textTextNode);//appendChild增加子元素，parent =>父元素
+        console.log('pElement',pElement);
+
+
+        //練習一  建立好的pElement
+        //如何放進去div1裡
+
+        const div1=document.getElementById('div1');
+        div1.appendChild(pElement);//若是用docoument.write是無法插在某節點內，appendchild可以插在div1裡面
+        //已經加入過的節點就無法重複放，需要再重新設一個新的pElement2節點(重複以上2.1-2.3步驟)
+        console.log(div1);
+
+
+
+
+        //練習二  
+        //button
+        //建立一個新的hello 你好嗎
+        //click-> function -> 每次都會建立新的p 新的text appendchild
+        //等於是把上面的程式copy下來到function裡  就能執行
+        
+        
+        function append(){
         // 2.1 建立P元素
         const pElement = document.createElement('p');
         // 2.2 建立text
         const textTextNode = document.createTextNode('hello 您好嗎 衷心感謝');        
         // 2.3 建立關聯
-        pElement.appendChild(textTextNode);
+        pElement.appendChild(textTextNode);//appendChild增加子元素，parent =>父元素
         console.log('pElement',pElement);
+
+        const div1=document.getElementById('div1');
+        div1.appendChild(pElement);//若是用docoument.write是無法插在某節點內，appendchild可以插在div1裡面
+        //已經加入過的節點就無法重複放，需要再重新設一個新的pElement2節點(重複以上2.1-2.3步驟)
+        console.log(div1);
+        }
+        
+
+        //練習三
+        //del button
+        function del(){
+            console.log('del ok');
+            p1.remove();//刪除節點
+            // p2.remove();
+        }
+        // function delp1(){
+        //     p1.remove();
+        // }
+        // function delp2(){
+        //     p2.remove();
+        // }
+        const p1=document.getElementById('p1');
+        const p2=document.getElementById('p2');
 
     </script>
 </body>

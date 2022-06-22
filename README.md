@@ -120,3 +120,18 @@
   * getAttribute(抓屬性)
 * EVENT 
   * button onclick、addEventlistener
+    * addEventlistener('click',function(name){});
+    * addEventlistener('click',name);  這裡的function不用加()，只要打出name就好
+## 0622
+* DOM
+  * 建立子元素p
+    * {const pElement = document.createElement('p');}
+  * 建立text
+    * {const textTextNode = document.createTextNode('hello 您好嗎 衷心感謝');}
+  * 建立以上兩個的關聯
+    * {pElement.appendChild(textTextNode);}
+  * 再把建立的關聯加入到父元內
+    * {const div1=document.getElementById('div1');
+        div1.appendChild(pElement);}
+  * 使用button建立新的p文字(function)
+        
