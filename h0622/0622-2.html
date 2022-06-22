@@ -18,7 +18,7 @@
         </p>
     </div>
     <button type="button" onclick="append()">新增文字</button>
-    <button type="button" onclick="del()">刪除</button>
+    <button type="button" onclick="del()">刪除p1</button>
     
     
     
@@ -46,7 +46,7 @@
 
 
 
-
+//---------------------------------
         //練習二  
         //button
         //建立一個新的hello 你好嗎
@@ -54,11 +54,13 @@
         //等於是把上面的程式copy下來到function裡  就能執行
         
         
-        function append(){
+    function append(){
         // 2.1 建立P元素
         const pElement = document.createElement('p');
+        const allp=document.querySelectorAll('p');
         // 2.2 建立text
-        const textTextNode = document.createTextNode('hello 您好嗎 衷心感謝');        
+        // const textTextNode = document.createTextNode('hello 您好嗎 衷心感謝');        
+        const textTextNode = document.createTextNode('p'+(allp.length+1)+'hello 您好嗎 衷心感謝'); //練習五       
         // 2.3 建立關聯
         pElement.appendChild(textTextNode);//appendChild增加子元素，parent =>父元素
         console.log('pElement',pElement);
@@ -67,6 +69,9 @@
         div1.appendChild(pElement);//若是用docoument.write是無法插在某節點內，appendchild可以插在div1裡面
         //已經加入過的節點就無法重複放，需要再重新設一個新的pElement2節點(重複以上2.1-2.3步驟)
         console.log(div1);
+        
+        pElement.setAttribute('onclick','delP(this)');
+            console.log('setAttribute pElement', pElement);
         }
         
 
@@ -85,6 +90,23 @@
         // }
         const p1=document.getElementById('p1');
         const p2=document.getElementById('p2');
+
+        // 練習四
+        // 新增<p>  onclick remove()
+        // pElemetn -> setAttribute
+        
+            //程式新增在71&72行
+            function delP(element){
+            element.remove();
+        }
+
+
+        // 練習五
+        // 新增的第幾個p     
+        // querySelectorAll('p') 
+        // allP.length
+
+        //答案為63行
 
     </script>
 </body>
