@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入jquery檔 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <button id="mybtn">mybtn</button>
+    <button id="mybtn1">練習一</button>
+    <button id="mybtn2">練習二</button>
+    <button id="mybtn3">練習三</button>
+
+    <div id="div1">
+    <p id="myp">myp</p>
+    </div>
+
+    <script>
+        function append(num){
+        // 2.1 建立P元素
+        const pElement = document.createElement('p');
+        // 2.2 建立text
+        // const textTextNode = document.createTextNode('hello 您好嗎 衷心感謝');        
+        const textTextNode = document.createTextNode('p'+num+'hello 您好嗎 衷心感謝'); //練習五       
+        // 2.3 建立關聯
+        pElement.appendChild(textTextNode);//appendChild增加子元素，parent =>父元素
+        
+
+        const div1=document.getElementById('div1');
+        div1.appendChild(pElement);//若是用docoument.write是無法插在某節點內，appendchild可以插在div1裡面
+        //已經加入過的節點就無法重複放，需要再重新設一個新的pElement2節點(重複以上2.1-2.3步驟)
+        console.log(div1);
+        
+        pElement.setAttribute('onclick','delP(this)');
+            console.log('setAttribute pElement', pElement);
+        }
+        // // 方法一
+        // $(document).ready(function(){
+        //     alert("hi");
+        // });
+
+        // // 方法二
+        // $().ready(function(){
+        //     alert("hi");
+        // });
+
+        // 方法三
+        $(function(){
+            // js
+            const mybtn =document.getElementById('mybtn');
+            const mypByjs=document.getElementById('myp');
+
+            // jquery
+            $('#myp').text('hihihi myp');
+            let myp=$('#myp');
+            console.log('mypByjs',mypByjs);
+            console.log('myp',myp);
+
+            $('#mybtn').click(function(){
+                console.log('mybtn ok');
+            });
+            
+
+
+            // 練習一
+            // mybtn1 click
+            // myp text change text ok ↓
+
+            $('#mybtn1').click(function(){
+                $('#myp').text('aloha changetext');
+            });
+
+
+            // 練習二
+            // mybtn click
+            // myp text change text ok=>1
+            // myp text change text ok=>2
+            // myp text change text ok=>3
+
+            let countNum=0;
+            $('#mybtn2').click(function(){
+                console.log('count ok');
+                countNum+=1;
+                $('#myp').text(`myp text change=>${countNum}`);
+            });
+
+
+            // 練習三
+            // addbtn click
+            // addP ok countAdd =>1
+            // addP ok countAdd =>2
+            // addP ok countAdd =>3
+
+            let addcountnum=0;
+            // $addcountnum=0;   //這裡有$符號
+            $('#mybtn3').click(function(){
+                console.log('count okok');
+                addcountnum+=1;
+                // $addcountnum+=1;  //上面有$這裡就要有$
+                
+                // js方法
+                // append(addcountnum);//傳變數
+
+                //jq
+                const div1=$('#div1');
+                const addp=$('<p>hi addp jq</p>');//建立 p jq node
+                addp.text('yo'+addcountnum);   //jq obj 可以使用  html elements不可用
+                div1.append(addp);//把節點放進來
+
+                const addh3 =$('<h3>hi h3</h3>');
+                div1.after(addh3);  //插在div外
+            });
+
+        });
+    </script>
+</body>
+</html>
