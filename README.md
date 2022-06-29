@@ -135,16 +135,32 @@
         div1.appendChild(pElement);}
   * 使用button建立新的p文字(function)
   * 刪除按鈕  點選文字刪除  增加文字序號
-  * 作業
+  * 作業(四種方法)
     * 顯示與隱藏 
     * p1.style.visibility(hidden)
     * p2.style.display==="none"(block)
+    * element.nextElementSibling;
+    * -------------以下為同個程式碼-----------
+    * $(document).ready(function(){
+    * $('#h4').click(function(){
+    * $(this).next().toggle();
+    * //next 同層的下一個  都在div裡 h1下一個就是ul
+                //children() 小孩層 最接近 li
+    * });
+    * });
 ## 0629Jquery
 * Jquery
+* $(document).ready(function () {});開頭要加這個
   * 點擊按鈕變更文字
   * 點擊按鈕增加count次數
   * 將0622-2的建立p元素  文字 關聯性用jq方式顯現
   * after before(增加在原本外面的前或後)
   * append prepend (增加在裡面的前後)
   * addClass
+  * 0622作業講解 有四個方法js+jq 可到0622-3hw看
+  * ul > li:odd基數 or even偶數
+  * click function、slideToggle
+  * onclick事件
+  * $('p').on({key:value , key:value , key:value})
+  * mouseenter、mouseleave (滑鼠進入、離開)
         
