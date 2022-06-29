@@ -142,5 +142,7 @@
   * 點擊按鈕變更文字
   * 點擊按鈕增加count次數
   * 將0622-2的建立p元素  文字 關聯性用jq方式顯現
-  * after
+  * after before(增加在原本外面的前或後)
+  * append prepend (增加在裡面的前後)
+  * addClass
         
