@@ -136,7 +136,9 @@
   * 使用button建立新的p文字(function)
   * 刪除按鈕  點選文字刪除  增加文字序號
   * 作業
-    * 顯示與隱藏 p1.style.visibility
+    * 顯示與隱藏 
+    * p1.style.visibility(hidden)
+    * p2.style.display==="none"(block)
 ## 0629Jquery
 * Jquery
   * 點擊按鈕變更文字

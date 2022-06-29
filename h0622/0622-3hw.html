@@ -9,11 +9,11 @@
 <body>
     <div>
         <h1 id="h1" onclick="hidep1()">主要選單1</h1>
-        <p id="p1" >
-        次選單1-1 <br>
-        次選單1-2 <br>
-        次選單1-3
-        </p>       
+        <ul id="u1">
+        <li>次選單1-1</li>
+        <li>次選單1-2</li>
+        <li>次選單1-3</li>
+        </ul>       
     </div>
     <div>
         <h1 id="h2" onclick="hidep2()">主要選單2</h1>
@@ -41,7 +41,7 @@
         
 
         function hidep1(){
-            const p1=document.getElementById("p1");
+            const p1=document.getElementById("u1");
             if(p1.style.visibility==='hidden'){
                 p1.style.visibility='visible';
             }else{
@@ -51,10 +51,10 @@
         
         function hidep2(){
             const p2=document.getElementById("p2");
-            if(p2.style.visibility==='hidden'){
-                p2.style.visibility='visible';
+            if(p2.style.display==="none"){
+                p2.style.display="block";
             }else{
-                p2.style.visibility='hidden';
+                p2.style.display="none";
             }
         }
         
