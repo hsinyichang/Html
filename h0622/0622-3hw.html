@@ -7,7 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+        <h1 id="h1" onclick="hidep1()">主要選單1</h1>
+        <p id="p1" >
+        次選單1-1 <br>
+        次選單1-2 <br>
+        次選單1-3
+        </p>       
+    </div>
+    <div>
+        <h1 id="h2" onclick="hidep2()">主要選單2</h1>
+        <p id="p2">
+        次選單2-1 <br>
+        次選單2-2 <br>
+        次選單2-3</p>   
+    </div>
+
 
     <script>
 
@@ -23,6 +38,30 @@
         // 
         // 功能: 當選主要選單時 隱藏或出現次選單
 
+        
+
+        function hidep1(){
+            const p1=document.getElementById("p1");
+            if(p1.style.visibility==='hidden'){
+                p1.style.visibility='visible';
+            }else{
+                p1.style.visibility='hidden';
+            }
+        }
+        
+        function hidep2(){
+            const p2=document.getElementById("p2");
+            if(p2.style.visibility==='hidden'){
+                p2.style.visibility='visible';
+            }else{
+                p2.style.visibility='hidden';
+            }
+        }
+        
+        const p2=document.getElementById("p2");
+
+
+        
 
 
     </script>
