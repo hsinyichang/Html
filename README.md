@@ -136,5 +136,5 @@
   * 使用button建立新的p文字(function)
   * 刪除按鈕  點選文字刪除  增加文字序號
   * 作業
-    * 顯示與隱藏
+    * 顯示與隱藏 p1.style.visibility
         
