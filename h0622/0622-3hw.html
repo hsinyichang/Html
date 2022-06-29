@@ -5,7 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+
+        .hide{
+
+        }
+        .red{
+            color: red;
+        }
+    </style>
+    </head>
 <body>
     <div>
         <h1 id="h1" onclick="hidep1()">主要選單1</h1>
@@ -21,6 +34,30 @@
         次選單2-1 <br>
         次選單2-2 <br>
         次選單2-3</p>   
+    </div>
+    <div>
+        <h1 id="h3" onclick="toggleFun(this)">主要選單3</h1>
+        <ul id="u3">
+        <li>次選單3-1</li>
+        <li>次選單3-2</li>
+        <li>次選單3-3</li>
+        </ul>       
+    </div>
+    <div>
+        <h1 id="h4" onclick="toggleFun4(this)">主要選單4</h1>
+        <ul id="u4">
+        <li>次選單4-1</li>
+        <li>次選單4-2</li>
+        <li>次選單4-3</li>
+        </ul>       
+    </div>
+    <div>
+        <h1 id="h5" onclick="toggleFun4(this)">主要選單5</h1>
+        <ul id="u4">
+        <li>次選單5-1</li>
+        <li>次選單5-2</li>
+        <li>次選單5-3</li>
+        </ul>       
     </div>
 
 
@@ -39,8 +76,8 @@
         // 功能: 當選主要選單時 隱藏或出現次選單
 
         
-
-        function hidep1(){
+        // 方法一
+        function hidep1(){   //這種的隱藏不會讓其他div取代
             const p1=document.getElementById("u1");
             if(p1.style.visibility==='hidden'){
                 p1.style.visibility='visible';
@@ -62,7 +99,47 @@
 
 
         
+        // 方法二
+        function toggleFun(element){
+            const  nextu3=element.nextElementSibling;
 
+            if(nextu3.style.display==="none"){
+                nextu3.style.display="block";
+            }else{
+                nextu3.style.display="none";
+            }
+
+        }
+
+
+        // 方法三
+        
+        function toggleFun4(element){
+            const  nextu4=element.nextElementSibling;
+            nextu4.ClassList.toggle('hide');
+
+            
+
+        }
+
+        // 方法四
+        //jquery
+
+        $(document).ready(function(){
+            $('#h4').click(function(){
+                $(this).next().toggle();  
+                //next 同層的下一個  都在div裡 h1下一個就是ul
+                //children() 小孩層 最接近 li
+            });
+        });
+
+        $(document).ready(function(){
+            $('#h5').click(function(){
+                $(this).next().toggleClass('red');  
+                //next 同層的下一個  都在div裡 h1下一個就是ul
+                //children() 小孩層 最接近 li
+            });
+        });
 
     </script>
 
