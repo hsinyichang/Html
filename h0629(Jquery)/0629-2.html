@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <style>
+            .red{
+                color: red;
+            }
+            .blue{
+                color: blue;
+            }
+
+        </style>
+
+    </head>
+
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+    </ul>
+    <script>
+        //jq
+        $(function () {
+
+            // append
+            const appendP = $('<li>一一一</li>');
+            appendP.addClass('red');
+            const ul = $('ul').first();
+            ul.append(appendP);//增加在555的後面
+
+            // prepend
+            const prependP = $('<li>取代</li>');
+            prependP.addClass('red');
+            ul.prepend(prependP);//擺在最前面
+            
+            // after
+            const afterP = $('<li>二二二</li>');
+            afterP.addClass('blue');
+            ul.after(afterP);//擺在原本ul外的另外一組li
+
+            // before
+            const beforeP = $('<li>之前</li>');
+            beforeP.addClass('blue');
+            ul.before(beforeP);//擺在原本的ul外最前面的li
+
+            // ctrl + h ->取代
+            // addClass  增加class
+            // removeClass 刪除class
+
+
+            // 練習一
+            // before after => blue
+            // append prepend => red
+            
+
+
+
+
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>
