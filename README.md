@@ -150,6 +150,7 @@
     * });
 ## 0629Jquery
 * Jquery
+* 要加入cdn js link 若加在head要寫以下↓
 * $(document).ready(function () {});開頭要加這個
   * 點擊按鈕變更文字
   * 點擊按鈕增加count次數
