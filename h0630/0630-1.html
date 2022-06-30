@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        #divBtn{
+            margin-top: 40px;
+        }
+        #divBtn,
+        #divContent {
+            text-align: center;
+            padding: 20px;
+            border: solid 1px rebeccapurple;
+            background-color: bisque;
+        }
+
+        #divContent {
+            background-color: aquamarine;
+            display: none;
+        }
+        .divBtn,
+        .divContent {
+            text-align: center;
+            padding: 20px;
+            border: solid 1px rebeccapurple;
+            background-color: bisque;
+        }
+
+        .divContent {
+            background-color: aquamarine;
+            display: none;
+        }
+
+        #myBtn {
+            position: fixed;
+            right: 10px;
+            top: 0;
+            text-align: right;
+            color: red;
+            border: solid 1px black;
+            background-color: aquamarine;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <button id="myBtn" type="button">open all</button>
+    <div class="divBtn">
+        景點一  取得優惠價
+    </div>
+    <div class="divContent" data-money="1000">
+        <h3>迪士尼樂園</h3>
+        <img src="https://picsum.photos/id/1001/400/300">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum inventore ipsum quis voluptatibus nulla
+            aperiam, quaerat quod consequatur nostrum. Dolores omnis quam doloribus ea! Assumenda a harum quisquam
+            possimus exercitationem!</p>
+        <button type="">折扣報名</button>
+    </div>
+    <div class="divBtn">
+        景點二
+    </div>
+    <div class="divContent" data-money="2000">
+        <h3>迪士尼樂園</h3>
+        <img src="https://picsum.photos/id/1002/400/300">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum inventore ipsum quis voluptatibus nulla
+            aperiam, quaerat quod consequatur nostrum. Dolores omnis quam doloribus ea! Assumenda a harum quisquam
+            possimus exercitationem!</p>
+        <button type="">折扣報名</button>
+    </div>
+
+    <div class="divBtn">
+        景點三
+    </div>
+    <div class="divContent" data-money="3000">
+        <h3>迪士尼樂園</h3>
+        <img src="https://picsum.photos/id/1003/400/300">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum inventore ipsum quis voluptatibus nulla
+            aperiam, quaerat quod consequatur nostrum. Dolores omnis quam doloribus ea! Assumenda a harum quisquam
+            possimus exercitationem!</p>
+        <button type="">折扣報名</button>
+    </div>
+    <div id="divBtn">
+        Click aaaaaaaaaaaaa
+    </div>
+    <div id="divContent">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus molestias, iure quasi, nostrum debitis
+        cupiditate nemo provident animi, saepe minus molestiae alias. Ut amet ex, eos dolores repudiandae sequi cum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus molestias, iure quasi, nostrum debitis
+        cupiditate nemo provident animi, saepe minus molestiae alias. Ut amet ex, eos dolores repudiandae sequi cum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus molestias, iure quasi, nostrum debitis
+        cupiditate nemo provident animi, saepe minus molestiae alias. Ut amet ex, eos dolores repudiandae sequi cum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus molestias, iure quasi, nostrum debitis
+        cupiditate nemo provident animi, saepe minus molestiae alias. Ut amet ex, eos dolores repudiandae sequi cum!
+    </div>
+
+    
+
+    <script>
+        function changeText(){
+                let checkDiv = $('.divContent').is(":visible"); //抓class 是否可以顯示
+                console.log('checkDiv',checkDiv);
+                if (!checkDiv) {
+                    $('#myBtn').text('open all');
+                } else {
+                    $('#myBtn').text('close all');
+                }
+            }
+
+
+        // $(document).ready(function(){  //新版jq可以免寫
+        $('#divBtn').click(function () {
+            $('#divContent').slideToggle(); //T要大寫
+            console.log(this);
+        });
+
+        // });
+
+        const discount = 0.8;
+
+            // let oldText = $('.divContent > h3').first().text();
+            // console.log('oldText', oldText);
+            // // jquery data-set
+            // let dataText = $('.divContent').first().data('money'); //int            
+            // // let dataText = $('.divContent').first().attr('data-money'); //抓string
+            // console.log('dataText', dataText);
+            // $('.divContent > h3').first().text(oldText+' 原價 =>' + dataText + ' 限時特價 => ' + dataText * discount);
+
+            $('.divContent').each(function(){
+                const h3Tag=$(this).find('h3');
+                const oldText=h3Tag.text();
+                const dataText=$(this).first().data('money');
+                h3Tag.text(oldText+'原價=>'+dataText+'限時特價'+(dataText*discount));
+            });
+
+
+        //練習一
+        
+        $('.divBtn').click(function () {
+                console.log(this);
+                // $('.divContent').slideToggle();
+                $(this).next().slideToggle(changeText);//下一個同層 <div class="cont">
+                //執行完slideToggle後才會執行changeText
+
+            });
+
+        //練習二
+        //點選全部縮小
+        //全部的內容都會一起縮小
+
+        $('#myBtn').click(function () {
+                console.log('myBtn click');
+                // 方法一
+                let allContent = $('.divContent').is(":visible"); //抓class 是否可以顯示
+                if (!allContent) {
+                    $('.divContent').slideDown();
+                    $('#myBtn').text('close all');
+                } else {
+                    $('.divContent').slideUp();
+                    $('#myBtn').text('open all');
+                }
+                });
+        //練習三
+        //原本是全部縮小 close
+        //點進去便全部展開 open  ↑↑
+
+
+
+
+        
+    </script>
+</body>
+
+</html>

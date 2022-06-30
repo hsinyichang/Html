@@ -165,4 +165,13 @@
       //children() 小孩層 最接近 li
     * });
     * });
-        
+## 0630JQuery
+* toggle()的練習  使用is(":visible") 抓class 是否可以顯示
+* 在div 裡藏data資料  data-money  data-text ...
+  * let dataText = $('.divContent').first().data('money');
+* 做一個按鈕使全部的div 都縮小或展開，以及按鈕的文字變化
+* 在元素中加入class
+* this  &  $(this)  的不同
+* $('#blue').css('color',"blue");
+* 使用each 跑每個選項
+
