@@ -135,11 +135,11 @@
             // $('.divContent > h3').first().text(oldText+' 原價 =>' + dataText + ' 限時特價 => ' + dataText * discount);
 
             $('.divContent').each(function(){
-                const h3Tag=$(this).find('h3');
+                const h3Tag=$(this).find('h3');  //找到h3標籤
                 const oldText=h3Tag.text();
                 const dataText=$(this).first().data('money');
                 h3Tag.text(oldText+'原價=>'+dataText+'限時特價'+(dataText*discount));
-            });
+            });   //讓每個標題都跑一次原價特價
 
 
         //練習一
