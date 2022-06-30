@@ -140,14 +140,7 @@
     * p1.style.visibility(hidden)
     * p2.style.display==="none"(block)
     * element.nextElementSibling;
-    * -------------以下為同個程式碼-----------
-    * $(document).ready(function(){
-    * $('#h4').click(function(){
-    * $(this).next().toggle();
-    * //next 同層的下一個  都在div裡 h1下一個就是ul
-                //children() 小孩層 最接近 li
-    * });
-    * });
+   
 ## 0629Jquery
 * Jquery
 * 要加入cdn js link 若加在head要寫以下↓
@@ -164,4 +157,12 @@
   * onclick事件
   * $('p').on({key:value , key:value , key:value})
   * mouseenter、mouseleave (滑鼠進入、離開)
+   * -------------0622作業用jq解法以下為同個程式碼-----------
+    * $(document).ready(function(){
+    * $('#h4').click(function(){
+    * $(this).next().toggle();
+    * //next() 下個父層  都在div裡 h1下一個就是ul
+      //children() 小孩層 最接近 li
+    * });
+    * });
         

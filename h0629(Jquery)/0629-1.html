@@ -105,13 +105,14 @@
                 // append(addcountnum);//傳變數
 
                 //jq
-                const div1=$('#div1');
-                const addp=$('<p>hi addp jq</p>');//建立 p jq node
+                const div1=$('#div1'); 
+                const addp=$('<p>hi addp jq</p>');//建立 p元素+text jq node
                 addp.text('yo'+addcountnum);   //jq obj 可以使用  html elements不可用
-                div1.append(addp);//把節點放進來
+                div1.append(addp);//把節點放進來(子層)
+                //js是 appendChild
 
                 const addh3 =$('<h3>hi h3</h3>');
-                div1.after(addh3);  //插在div外
+                div1.after(addh3);  //插在div外(父層)
             });
 
         });
