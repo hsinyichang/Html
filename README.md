@@ -174,4 +174,5 @@
 * this  &  $(this)  的不同
 * $('#blue').css('color',"blue");
 * 使用each 跑每個選項
+* 使用Menu的作業 放置圖片toggle
 
