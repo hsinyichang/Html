@@ -165,6 +165,7 @@
       //children() 小孩層 最接近 li
     * });
     * });
+* * 若要使用動態按鈕新增文字 和刪除按鈕  則要使用變數id++
 ## 0630JQuery
 * toggle()的練習  使用is(":visible") 抓class 是否可以顯示
 * 在div 裡藏data資料  data-money  data-text ...

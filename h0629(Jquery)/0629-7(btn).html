@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<table>
+    <tbody id="options">
+        <tr>
+            <td>
+                <label>選項:</label>
+            </td>
+            <td>
+                <input type="text" name="option[]"><input type="button" value="新增選項" id="addvote">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+    <script>
+        // 動態新增欄位id編號預設值
+        let trId = 1;
+
+        // 動態新增欄位
+        $("#addvote").click(function () {
+            $("#options").append('<tr id="tr'+trId+'"><td><label>選項:</label></td><td><input type="text" name="option[]"><button type="button" onclick="delbtn(' + trId + ')">刪除</button></td></tr>');
+            trId++;
+        });
+        
+        // 動態刪除欄位
+        function delbtn(id) {
+            $("#tr" + id).remove();
+        }    
+        
+    </script>
+</body>
+</html>
