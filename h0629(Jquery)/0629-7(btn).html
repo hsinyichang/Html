@@ -22,7 +22,11 @@
         </tr>
     </tbody>
 </table>
-
+<ul>
+    <li><span>click me</span></li>
+    <li><span>click me</span></li>
+    <li><span>click me</span></li>
+  </ul>
 
     <script>
         // 動態新增欄位id編號預設值
@@ -33,12 +37,16 @@
             $("#options").append('<tr id="tr'+trId+'"><td><label>選項:</label></td><td><input type="text" name="option[]"><button type="button" onclick="delbtn(' + trId + ')">刪除</button></td></tr>');
             trId++;
         });
-        
         // 動態刪除欄位
         function delbtn(id) {
             $("#tr" + id).remove();
         }    
+        // $('li span').click(function(){alert('hi')});
+        $('li').on('click','span',function(){alert('hi')});
         
+        //.click->它只對於你現在html上所指定的全部元素進行事件綁定，動態生成的不能
+        //.on()所佔用的記憶體會比.click還少
+        //.on()為Namespaced Events，可以做到事件命名的管理
     </script>
 </body>
 </html>
