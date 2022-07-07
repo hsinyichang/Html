@@ -137,7 +137,7 @@
   * 刪除按鈕  點選文字刪除  增加文字序號
   * 作業(四種方法)
     * 顯示與隱藏 
-    * p1.style.visibility(hidden)
+    * p1.style.visibility(hidden)  此種block 不會一起隱藏(只隱藏內容)
     * p2.style.display==="none"(block)
     * element.nextElementSibling;
    
@@ -191,4 +191,4 @@
 * .children()   .find()    .odd()   .even()    .first()   .last()  .siblings()  .nextAll()   .nextUntil()
 * 燈號轉換的練習題
 * table 的.children()  不是tr 是tbody 或 tfoot(通常這兩個會省略)   可用 find('tr)   .eq()->index陣列位置
-* 製作時鐘   js  jq  兩種方法
+* 製作時鐘   js  jq  兩種方法  hidden 可參考0622-3
