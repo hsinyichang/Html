@@ -188,5 +188,7 @@
 ## 0707 了解父層子層的相對關係
 * .parentsUntil() 到父層的這層以下，當層不算
 * .click()   .off('click').on() 重置  點擊
-* .children()   .find()    .odd()   .even()    .first()   .last()
+* .children()   .find()    .odd()   .even()    .first()   .last()  .siblings()  .nextAll()   .nextUntil()
+* 燈號轉換的練習題
 * table 的.children()  不是tr 是tbody 或 tfoot(通常這兩個會省略)   可用 find('tr)   .eq()->index陣列位置
+* 製作時鐘   js  jq  兩種方法

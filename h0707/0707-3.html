@@ -44,10 +44,10 @@
             <ul>
                 ul
                 <li>hello li 111</li>
-                <li>hello li 222</li>
+                <li class="red">hello li 222</li>
                 <li id="333">hello li 333</li>
                 <li>hello li 444</li>
-                <li id="555">hello li 555</li>
+                <li class="red" id="555">hello li 555</li>
                 <li id="666">hello li 666</li>
             </ul>
         </div>
@@ -132,10 +132,18 @@
             obj6.css('color','purple');
 
 
-            const li333=$('#333').siblings().css('color','pink');//同層  除了自己以外的
+            // const li333=$('#333').siblings().css('color','pink');//同層  除了自己以外的
             // const li333=$('#333').nextAll().css('color','pink');//同層之後所有
             // const li333=$('#333').nextUntil('#555').css('color','pink');//333-555之間的
 
+            // filter
+            // first / last / index eq() /filter
+            $('li').first().css('color','red');
+            $('li').last().css('color','green');
+            $('li').eq(1).css('color','blue');
+
+            // filter 搭配 class使用
+            $('li').filter('.red').css('color','blue'); //篩出class red  變更為藍色
 
         });
 
