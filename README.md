@@ -178,4 +178,15 @@
 * 使用each 跑每個選項
 * 使用Menu的作業 放置圖片toggle
 ## 0706
-
+* setInterval(可重複執行)  &  setTimeout(執行一次)
+* 要記得設間隔時間(單位：毫秒)
+* 第一個可用於計時器   第二個可用於session/cookie儲存
+* 清除->set 改為 clear
+* 設置flag
+* 投籃大賽的練習題 修正bug(邏輯很重要)
+* localStorage  將文字檔案存在本端
+## 0707
+* .parentsUntil() 到父層的這層以下，當層不算
+* .click()   .off('click').on() 重置  點擊
+* .children()   .find()    .odd()   .even()    .first()   .last()
+* table 的.children()  不是tr 是tbody 或 tfoot(通常這兩個會省略)   可用 find('tr)
