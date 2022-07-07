@@ -192,23 +192,27 @@
             });
 
             // 方法一 class
-            $('.myName').each(function (index,element) {
+            $('.myName').each(function (index, element) {
                 $(this).click(function () {
-                    console.log(index);
+                    // console.log('span',index);
                     let getID = $(this).parent().prev().text();
                     let getName = $(this).text();
                     let getMobile = $(this).parent().next().text();
 
                     resetFun();
-                    log($(this).parent().parent().prev());
-                    $(this).parent().parent().prev().css('color','green');
-                    $(this).parent().parent().css('color','red');
-                    $(this).parent().parent().next().css('color','blue');
+                    // 不要第一個tr
+                    let prevObj = $(this).parent().parent().prev();
+                    console.log('prevObj.index', prevObj.index());
+                    if (prevObj.index() != 0) {
+                        prevObj.css('color', 'green');
+                    }
+                    $(this).parent().parent().css('color', 'red');
+                    $(this).parent().parent().next().css('color', 'blue');
 
-                    alert(`Hello ${getID} / ${getName} / ${getMobile} `);
+                    // alert(`Hello ${getID} / ${getName} / ${getMobile} `);
                 });
             });
-
+            
             // 方法二 綁定元件
             // myTable.find('tr').each(function (index, element) {
             //     $(this).click(function () {
@@ -217,7 +221,6 @@
             // });
 
         });
-
 
     </script>
 </body>

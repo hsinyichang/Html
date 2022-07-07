@@ -122,7 +122,7 @@
   * button onclick、addEventlistener
     * addEventlistener('click',function(name){});
     * addEventlistener('click',name);  這裡的function不用加()，只要打出name就好
-## 0622
+## 0622 增加節點建立關聯
 * DOM
   * 建立子元素p
     * {const pElement = document.createElement('p');}
@@ -141,7 +141,7 @@
     * p2.style.display==="none"(block)
     * element.nextElementSibling;
    
-## 0629Jquery
+## 0629 Jquery
 * Jquery
 * 要加入cdn js link 若加在head要寫以下↓
 * $(document).ready(function () {});開頭要加這個
@@ -165,9 +165,9 @@
       //children() 小孩層 最接近 li
     * });
     * });
-* 若要使用動態按鈕新增文字 和刪除按鈕  則要使用變數id++
+* 若要使用動態按鈕新增文字 和刪除按鈕  則要使用變數id++ (投票系統作業遇到的問題)
 * .click  $  .on('click') 事件的比較
-## 0630JQuery
+## 0630
 * toggle()的練習  使用is(":visible") 抓class 是否可以顯示
 * 在div 裡藏data資料  data-money  data-text ...
   * let dataText = $('.divContent').first().data('money');
@@ -175,7 +175,7 @@
 * 在元素中加入class
 * this  &  $(this)  的不同
 * $('#blue').css('color',"blue");
-* 使用each 跑每個選項
+* 使用each 針對每個選項做什麼動作
 * 使用Menu的作業 放置圖片toggle
 ## 0706
 * setInterval(可重複執行)  &  setTimeout(執行一次)
@@ -185,8 +185,8 @@
 * 設置flag
 * 投籃大賽的練習題 修正bug(邏輯很重要)
 * localStorage  將文字檔案存在本端
-## 0707
+## 0707 了解父層子層的相對關係
 * .parentsUntil() 到父層的這層以下，當層不算
 * .click()   .off('click').on() 重置  點擊
 * .children()   .find()    .odd()   .even()    .first()   .last()
-* table 的.children()  不是tr 是tbody 或 tfoot(通常這兩個會省略)   可用 find('tr)
+* table 的.children()  不是tr 是tbody 或 tfoot(通常這兩個會省略)   可用 find('tr)   .eq()->index陣列位置

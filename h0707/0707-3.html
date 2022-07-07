@@ -45,10 +45,10 @@
                 ul
                 <li>hello li 111</li>
                 <li>hello li 222</li>
-                <li>hello li 333</li>
+                <li id="333">hello li 333</li>
                 <li>hello li 444</li>
-                <li>hello li 555</li>
-                <li>hello li 666</li>
+                <li id="555">hello li 555</li>
+                <li id="666">hello li 666</li>
             </ul>
         </div>
     </div>
@@ -129,9 +129,12 @@
             obj3.css('color','green');
             obj4.css('color','brown');
             obj5.css('color','skyblue');
-            obj6.css('color','pink');
+            obj6.css('color','purple');
 
 
+            const li333=$('#333').siblings().css('color','pink');//同層  除了自己以外的
+            // const li333=$('#333').nextAll().css('color','pink');//同層之後所有
+            // const li333=$('#333').nextUntil('#555').css('color','pink');//333-555之間的
 
 
         });
