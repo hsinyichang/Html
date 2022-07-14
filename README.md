@@ -192,3 +192,20 @@
 * 燈號轉換的練習題
 * table 的.children()  不是tr 是tbody 或 tfoot(通常這兩個會省略)   可用 find('tr)   .eq()->index陣列位置
 * 製作時鐘   js  jq  兩種方法  hidden 可參考0622-3
+## 0713 Bootstrap
+* 版面的配置(滿版、縮排)
+* class 的應用
+* 載入cdnjs  head區放css
+* body區放js  bootstrap separate 3行
+## 0714 Bootstrap
+* h1-h6 SEO
+* display
+* lead 突出
+* mark 畫重點
+* del 刪除線
+* u 底線
+* strong 粗體強粗體
+* b 粗體
+* blockquote 引言
+* list-group
+* Media Object
