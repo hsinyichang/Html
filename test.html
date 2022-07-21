@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/jquery-1.11.3.js" ></script> 
+<link rel="stylesheet" href="../js/dist/jquery.onoff.css" rel="external nofollow" /> 
+<script type="text/javascript" src="../js/dist/jquery.onoff.js" ></script> 
+    <style>
+        onoffswitch-inner:before { 
+        content: "OFF"; 
+        padding-left: 3px; 
+        color: #FFFFFF; 
+        background-color: #A14776; 
+        } 
+        onoffswitch-inner:after { 
+        content: "ON"; 
+        padding-right: 5px; 
+        color: #999999; 
+        background-color: #EEEEEE; 
+        text-align: right; 
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" checked onclick="showmodel(this)"/> 
+    
+<script>
+    $('input[type=checkbox]').onoff(); 
+    $(ele).prop("checked",true)
+    
+    function showmodel(ele){ 
+if(!$(ele).is(':checked')){ 
+var htmls=$(ele).parent().siblings('span').html(); 
+$('.mask').show(); 
+$('#reportName').html(htmls); 
+$('#yzmBox').html(mathRand()); 
+} 
+$(".cancel").unbind().click(function(){ 
+$(ele).prop("checked",true) 
+$('.mask').hide(); 
+}) 
+$(".sure").unbind().click(function(){ 
+if($(".telBox input").val()==$('#yzmBox').html()){ 
+/*$.ajax({ 
+url: ipAddress   "/MMSDailyBackstage/task2/getTaskTypes", 
+data:{"areaCode":"01","roleCode":"dhxt","appCode":"day_report","imei":"111111111111111"}, 
+type : "POST", 
+dataType: "json", 
+cache: false, 
+async: false, 
+success:function(json){ 
+var data=json.data; 
+var html=""; 
+if(json.success){ 
+for(var i in data){ 
+var taskTypeSubs=data[i].taskTypeSubs; 
+html ='<div class="col">'  
+'<p onclick="sliderDiv(this)"><span class="arrow down_a"></span><span>' data[i].taskType.taskTypeName '</span></p>'  
+'<ul class="lidetail">' 
+for(var j in taskTypeSubs){ 
+html ='<li>'  
+'<img src="../img/aduiticon.png">'  
+'<span>' taskTypeSubs[j].subTaskName '</span>'  
+'<input type="checkbox" checked/ onclick="showmodel(this)">'  
+'</li>' 
+} 
+html ='</ul></div>' 
+} 
+$('#auditBox').append(html); 
+$('input[type=checkbox]').onoff(); 
+} 
+} 
+});*/ 
+} 
+}) 
+} 
+</script>
+
+
+</body>
