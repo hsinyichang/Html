@@ -1,7 +1,7 @@
 <?php 
 
     // 初始化 curl
-    $curl = curl_init ("https://data.ntpc.gov.tw/api/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A/json?page=0&size=10");
+    $curl = curl_init ("https://data.ntpc.gov.tw/api/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A/json?page=0&size=30");
     //https 要取得
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
     
