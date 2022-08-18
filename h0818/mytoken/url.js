@@ -1,0 +1,1 @@
+let url="https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-8DF08DFB-420E-4831-9A5E-BD9598F52448";
